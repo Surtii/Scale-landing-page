@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import { Spinner } from 'reactstrap'
 
 const ETHCoinPrice = () => {
-
     const [ ETHCoinPrices, setETHCoinPrices] = useState(0)
     const [ naira, setNaira] = useState(0)
     const [ baseCurrency, setBaseCurrency ] = useState('')
-
+    const [loading, setLoading] = useState(true)
 
     const fetchBTCPriceData = async () => {
         try {
@@ -17,6 +17,7 @@ const ETHCoinPrice = () => {
             // States
             setETHCoinPrices(usd)
             setBaseCurrency(res.data.data.base)
+            setLoading(false)
         } catch (err) {
             console.log(err)
         }
@@ -46,12 +47,20 @@ const ETHCoinPrice = () => {
     return (
         <div className="item">
             <div className="main-wrapper">
-                <div className="amount">${''}{ETHCoinPrices}</div>
-                <h6 className="title">&#8358;{''}{naira}</h6>
-                <div className="current-info range-up">
-                    <i className="icon flaticon-up-carret"></i>
-                    <span className="rate">{baseCurrency}</span>
-                </div>
+               {
+                   loading ? (
+                       <Spinner/>
+                   ): (
+                    <>
+                        <div className="amount">${''}{ETHCoinPrices}</div>
+                        <h6 className="title">&#8358;{''}{naira}</h6>
+                        <div className="current-info range-up">
+                            <i className="icon flaticon-up-carret"></i>
+                            <span className="rate">{baseCurrency}</span>
+                        </div>
+                    </>
+                   )
+               }
             </div>
         </div>
     )

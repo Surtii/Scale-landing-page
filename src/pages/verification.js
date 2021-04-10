@@ -65,10 +65,10 @@ const Verification = ({match}) => {
               
             }
             const veri = await axios.post('https://api.paystack.co/bvn/match', veriParams, config)
-            setMessage(veri.data.message)
             const status = veri.data.status
             
             if(status){
+                setMessage(veri.data.message)
                 try {
 
                     const config = {
@@ -85,6 +85,9 @@ const Verification = ({match}) => {
                 } catch (err) {
                     console.log(err)
                 }
+            }else{
+                setMessage('Network Failure, try again.')
+                setBvn('')
             }
             
         } catch (err) {

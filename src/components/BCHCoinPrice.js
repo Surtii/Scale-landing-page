@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import { Spinner } from 'reactstrap'
 
 const BCHCoinPrice = () => {
     const [ BCHCoinPrices, setBCHCoinPrices] = useState(0)
     const [ naira, setNaira] = useState(0)
     const [ baseCurrency, setBaseCurrency ] = useState('')
-
+    const [loading, setLoading] = useState(true)
 
     const fetchBTCPriceData = async () => {
         try {
@@ -16,6 +17,7 @@ const BCHCoinPrice = () => {
             // States
             setBCHCoinPrices(usd)
             setBaseCurrency(res.data.data.base)
+            setLoading(false)
         } catch (err) {
             console.log(err)
         }
@@ -43,12 +45,20 @@ const BCHCoinPrice = () => {
     return (
          <div className="item">
             <div className="main-wrapper">
-                <div className="amount">${''}{BCHCoinPrices}</div>
-                <h6 className="title">&#8358;{''}{naira}</h6>
-                <div className="current-info range-up">
-                    <i className="icon flaticon-up-carret"></i>
-                    <span className="rate">{baseCurrency}</span>
-                </div>
+                {
+                    loading ? (
+                        <Spinner/>
+                    ):(
+                        <>
+                            <div className="amount">${''}{BCHCoinPrices}</div>
+                            <h6 className="title">&#8358;{''}{naira}</h6>
+                            <div className="current-info range-up">
+                                <i className="icon flaticon-up-carret"></i>
+                                <span className="rate">{baseCurrency}</span>
+                            </div>
+                        </>
+                    )
+                }
             </div>
         </div>
     )

@@ -16,7 +16,7 @@ function App() {
     <Router>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/verification/:id" component={Verification}/>
+        <Route exact path="/verification/tier-2/:id" component={Verification}/>
       </Switch>
     </Router>
   );
