@@ -68,7 +68,6 @@ const Verification = ({match}) => {
             const status = veri.data.status
             
             if(status){
-                setMessage(veri.data.message)
                 try {
 
                     const config = {

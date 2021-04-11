@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import AOS from "aos";
 import OwlCarousel from 'react-owl-carousel';
-import { options, option3, option2 } from '../utils/carousel'
+import { options,  option2, option3} from '../utils/carousel'
 import CountUp from 'react-countup';
 import {Link} from 'react-router-dom'
 import AllPrices from '../components/AllPrices'
@@ -190,46 +190,45 @@ const Home = () => {
                 <div className="progress-slider">
                   <OwlCarousel {...option2}>
                     <div className="item">
-                    <div className="inner-block">
-                      <div className="icon"><i className="fa fa-file-text"></i></div>
-                      <h3>Generate Invoice</h3>
-                      <p>After buyer and seller have mutually agreed to the transaction terms, either party creates an invoice through the ScaleX Chatbot </p>
-                      <div className="num">1</div>
+                      <div className="inner-block">
+                        <div className="icon"><i className="fa fa-file-text"></i></div>
+                        <h3>Generate Invoice</h3>
+                        <p>After buyer and seller have mutually agreed to the transaction terms, either party creates an invoice through the ScaleX Chatbot </p>
+                        <div className="num">1</div>
+                      </div>
                     </div>
-                  </div>
-                  <div className="item">
-                    <div className="inner-block">
-                      <div className="icon"><i className="fa fa-book"></i></div>
-                      <h3>Confirm Invoice</h3>
-                      <p>Both parties review invoice and mutually accept it as satisfactory </p>
-                      <div className="num">2</div>
-                    </div> 
-                  </div>
-                  <div className="item">
-                    <div className="inner-block">
-                      <div className="icon"><i className="fa fa-bitcoin"></i></div>
-                      <h3>Escrow tokens </h3>
-                      <p>ScaleX provides an appropriate wallet to the seller to deposit tokens into escrow. </p>
-                      <div className="num">3</div>
+                    <div className="item">
+                      <div className="inner-block">
+                        <div className="icon"><i className="fa fa-book"></i></div>
+                        <h3>Confirm Invoice</h3>
+                        <p>Both parties review invoice and mutually accept it as satisfactory </p>
+                        <div className="num">2</div>
+                      </div> 
                     </div>
-                  </div>
-                  <div className="item">
-                    <div className="inner-block">
-                      <div className="icon"><i className="fa fa-compass"></i></div>
-                      <h3>Upload Hash</h3>
-                      <p>Hash is uploaded to ScaleX as a measure to validate confirmation of deposit by the seller. Upon confirmation of deposit on the blockchain, the buyer is authorized to credit the seller via preferred currency (e.g. Fiat). </p>
-                      <div className="num">4</div>
-                    </div> 
-                  </div>
-                  <div className="item">
-                    <div className="inner-block">
-                      <div className="icon"><i className="fa fa-dollar"></i></div>
-                      <h3>Payment confirmation and release of tokens </h3>
-                      <p>Seller confirms buyer's payment and proceeds to authorize ScaleX to release tokens to buyer's wallet.</p>
-                      <div className="num">5</div>
-                    </div> 
-                  </div>
-                  
+                    <div className="item">
+                      <div className="inner-block">
+                        <div className="icon"><i className="fa fa-bitcoin"></i></div>
+                        <h3>Escrow tokens </h3>
+                        <p>ScaleX provides an appropriate wallet to the seller to deposit tokens into escrow. </p>
+                        <div className="num">3</div>
+                      </div>
+                    </div>
+                    <div className="item">
+                      <div className="inner-block">
+                        <div className="icon"><i className="fa fa-compass"></i></div>
+                        <h3>Upload Hash</h3>
+                        <p>Hash is uploaded to ScaleX as a measure to validate confirmation of deposit by the seller. Upon confirmation of deposit on the blockchain, the buyer is authorized to credit the seller via preferred currency (e.g. Fiat). </p>
+                        <div className="num">4</div>
+                      </div> 
+                    </div>
+                    <div className="item">
+                      <div className="inner-block">
+                        <div className="icon"><i className="fa fa-dollar"></i></div>
+                        <h3>Payment confirmation and release of tokens </h3>
+                        <p>Seller confirms buyer's payment and proceeds to authorize ScaleX to release tokens to buyer's wallet.</p>
+                        <div className="num">5</div>
+                      </div> 
+                    </div>
                   </OwlCarousel>
                 </div> 
               </div> 
@@ -239,7 +238,7 @@ const Home = () => {
           <div className="partner-section">
             <div className="container">
               <div className="partner-slider">
-                <OwlCarousel {...option3}>
+                <OwlCarousel { ...option3 }>
                   <div className="item"><img src="/eth-logo.png" alt=""/></div>
                   <div className="item"><img src="/btc-logo.png" alt=""/></div>
                   <div className="item"><img src="/usdt-logo.png" alt=""/></div>

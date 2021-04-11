@@ -1961,6 +1961,6 @@ body .theme-button:hover span {opacity: 1;}
     height: 520px;
 }
 
-.verification-wrapper{
+.verification-wrapper, .transactions{
   padding: 6rem 0rem 2rem 0rem;
 }

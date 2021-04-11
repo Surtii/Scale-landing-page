@@ -10,6 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Home from "./pages/home";
 import Verification from "./pages/verification";
+import Transactions from "./pages/transactions";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/verification/tier-2/:id" component={Verification}/>
+        <Route exact path="/transactions/:id" component={Transactions}/>
       </Switch>
     </Router>
   );
