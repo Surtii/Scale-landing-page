@@ -19,7 +19,6 @@
     "reactstrap": "^8.9.0",
     "simple-react-validator": "^1.6.0",
     "styled-components": "^5.2.3",
-    "tiny-slider": "^2.9.3",
     "web-vitals": "^1.1.1"
   },
   "scripts": {

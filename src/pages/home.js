@@ -11,10 +11,16 @@ import Mock02 from '../images/mockup-02.png';
 import Mock04 from '../images/mock-04.png'
 import Mock05 from '../images/mock-05.png'
 
-
 import Security from '../images/security.svg';
 import Trust from '../images/trust.svg';
 import Speed from "../images/speed.svg";
+
+import ETH from '../images/eth-logo.png';
+import BTC from '../images/btc-logo.png';
+import USDT from '../images/usdt-logo.png';
+import NGNT from '../images/ngnt-logo.png'
+import DOGE from '../images/doge-logo.png'
+import LITECOIN from '../images/litecoin-logo.png'
 
 
 
@@ -239,12 +245,12 @@ const Home = () => {
             <div className="container">
               <div className="partner-slider">
                 <OwlCarousel { ...option3 }>
-                  <div className="item"><img src="/eth-logo.png" alt=""/></div>
-                  <div className="item"><img src="/btc-logo.png" alt=""/></div>
-                  <div className="item"><img src="/usdt-logo.png" alt=""/></div>
-                  <div className="item"><img src="/ngnt-logo.png" alt=""/></div>
-                  <div className="item"><img src="/doge-logo.png" alt=""/></div>
-                  <div className="item"><img src="/litecoin-logo.png" alt=""/></div>
+                  <div className="item"><img src={ETH} alt="Ethereum Logo"/></div>
+                  <div className="item"><img src={BTC} alt="Bitcoin Logo"/></div>
+                  <div className="item"><img src={USDT} alt="USDT Logo"/></div>
+                  <div className="item"><img src={NGNT} alt="NGNT Logo"/></div>
+                  <div className="item"><img src={DOGE} alt="DOGE Logo"/></div>
+                  <div className="item"><img src={LITECOIN} alt="LITECOIN Logo"/></div>
                 </OwlCarousel>
               </div>
             </div>
