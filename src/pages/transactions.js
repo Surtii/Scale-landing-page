@@ -31,6 +31,10 @@ const columns = [
     selector: 'token'
   },
   {
+    name: 'Status',
+    selector: 'status'
+  },
+  {
     name: 'Date',
     selector: 'date_created'
   },
