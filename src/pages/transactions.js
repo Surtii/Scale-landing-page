@@ -12,11 +12,11 @@ import Layout from '../components/Layout'
 const columns = [
   {
     name: 'Seller',
-    selector: 'seller'
+    selector: 'seller_name'
   },
   {
     name: 'Buyer',
-    selector: 'buyer'
+    selector: 'buyer_name'
   },
   {
     name: 'Quantity',
@@ -32,7 +32,7 @@ const columns = [
   },
   {
     name: 'Date',
-    selector: 'date'
+    selector: 'date_created'
   },
 
 ];
@@ -51,7 +51,7 @@ const Transactions = ({match}) => {
                     'Content-Type': 'application/json',
                 }
             }
-            const transactions = await axios.get(`https://surtii.com/v1/scale.ai/user/history${id}`, config)
+            const transactions = await axios.get(`https://surtii.com/v1/scale.ai/user/history/${id}`, config)
 
             const data = transactions.data.data
 
@@ -86,9 +86,11 @@ const Transactions = ({match}) => {
                                     <Spinner style={{ width: '3rem', height: '3rem', top: '50%', left: '47%', position: "absolute" }} />
                                ):(
                                     <DataTable
-                                    title="Transaction History"
-                                    columns={columns}
-                                    data={allTransactions}
+                                      title="Transaction History"
+                                      columns={columns}
+                                      data={allTransactions}
+                                      pagination="true"
+                                      defaultSortField="true"
                                     />
                                )
                            }
