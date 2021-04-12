@@ -1,4 +1,5 @@
 import React, { useState, useEffect, Fragment } from 'react'
+import { Helmet } from "react-helmet";
 import { withRouter } from 'react-router-dom';
 import { Spinner } from 'reactstrap'
 import axios from 'axios'
@@ -109,6 +110,11 @@ const Verification = ({match}) => {
 
     return (
         <Layout>
+            <Helmet>
+                <title>Tier 1 Verification</title>
+                <meta name="title" content="Scale - Tier 1 Verification"/>
+                <meta name="description" content="ScaleX ensures you can securely and seamlessly buy and sell cryptocurrencies from anyone, anytime, anywhere."/>
+            </Helmet>
             <div className="contact-us-one" id="contact">
                 <div className="container">
                     <div className="my-5">

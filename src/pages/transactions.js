@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Helmet } from "react-helmet";
 import { withRouter } from 'react-router-dom';
 import { Spinner } from 'reactstrap'
 import DataTable from 'react-data-table-component';
@@ -71,6 +72,11 @@ const Transactions = ({match}) => {
 
     return (
         <Layout>
+            <Helmet>
+                <title>Transaction History</title>
+                <meta name="title" content="Scale - Transaction History"/>
+                <meta name="description" content="ScaleX ensures you can securely and seamlessly buy and sell cryptocurrencies from anyone, anytime, anywhere."/>
+            </Helmet>
             <div className="transactions">
                 <Container>
                     <Row>
