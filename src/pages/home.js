@@ -181,7 +181,7 @@ const Home = () => {
                           <p>Users</p>
                         </div>
                         <div className="col-sm-4">
-                          <h2 className="number"><span className="timer"><CountUp end={3} /></span></h2>
+                          <h2 className="number"><span className="timer"><CountUp end={6} /></span></h2>
                           <p>Coins</p>
                         </div>
                       </div>
