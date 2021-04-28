@@ -53,7 +53,7 @@ const Home = () => {
                             <h2>Messenger chatbot <br/>for P2P cryptocurrency exchange</h2>
                             <p className="col-lg-12 col-md-10 col-sm-12">ScaleX ensures you can securely and seamlessly buy and sell cryptocurrencies from anyone, anytime, anywhere.</p>
                             <ul className="button-group clearfix">
-                              <li><a href="http://t.me/ScaleP2PBot">Trade Now</a></li>
+                              <li><a href="http://t.me/ScaleXP2PBot">Trade Now</a></li>
                             </ul>
                           </div>
                       </div>
@@ -140,7 +140,7 @@ const Home = () => {
                     <div className="inner-wrapper">
                       <div className="row">
                         <div className="col-lg-5">
-                          <img src={Mock02} width="358" height="500" alt="Seller's Conversation" className="mockup-01" data-aos="fade-down" data-aos-duration="2500"/>
+                          <img src={Mock04} width="358" height="500" alt="Seller's Conversation" className="mockup-01" data-aos="fade-down" data-aos-duration="2500"/>
                         </div>
                         <div className="col-lg-7 ">
                           <div className="text">
@@ -148,7 +148,7 @@ const Home = () => {
                             <h6>You don’t need to download another App!</h6>
                             <p>Telegram is fast becoming a go-to marketplace for cryptocurrency exchanges. As such, ScaleX Chatbot is modelled around your day-to-day conversations during a P2P crypto transaction on Telegram and other messenger platforms.</p>
                             <ul className="button-group">
-                              <li><a href="http://t.me/ScaleP2PBot">Start trading</a></li>
+                              <li><a href="http://t.me/ScaleXP2PBot">Start trading</a></li>
                             </ul>
                           </div> 
                         </div>
