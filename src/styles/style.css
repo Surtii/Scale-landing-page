@@ -1961,6 +1961,40 @@ body .theme-button:hover span {opacity: 1;}
     height: 520px;
 }
 
-.verification-wrapper, .transactions{
+.verification-wrapper, .orders, .transactions{
   padding: 6rem 0rem 2rem 0rem;
+}
+
+.orders .nav{
+  justify-content: space-around;
+}
+
+.orders .nav-tabs{
+  border-bottom: none !important;
+}
+
+
+.orders .nav-tabs .nav-link{
+  font-weight: 700;
+  line-height: 20px;
+  /* color: ; */
+  cursor: pointer;
+}
+
+.orders .nav-tabs .nav-link:hover{
+  border-color: transparent !important;
+  border-bottom: 0px solid #0d27ab;
+
+}
+
+.orders .nav-tabs .nav-link.active{
+  color: #0d27ab !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+  border-bottom: 2px solid #0d27ab !important;
+
+}
+
+.orders a{
+  color: #151515;
 }

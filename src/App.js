@@ -8,9 +8,10 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import Home from "./pages/home";
-import Verification from "./pages/verification";
-import Transactions from "./pages/transactions";
+import Home from "./pages/Home";
+import Verification from "./pages/Verification";
+import Transactions from "./pages/Transactions";
+import Orders from "./pages/Orders";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/verification/tier-2/:id" component={Verification}/>
         <Route exact path="/transactions/:id" component={Transactions}/>
+        <Route exact path="/orders" component={Orders}/>
       </Switch>
     </Router>
   );

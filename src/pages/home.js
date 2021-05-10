@@ -9,7 +9,6 @@ import { options,  option2, option3} from '../utils/carousel'
 import AllPrices from '../components/AllPrices'
 import Navbar from '../components/Navbar';
 
-import Mock02 from '../images/mockup-02.png';
 import Mock04 from '../images/mock-04.png'
 import Mock05 from '../images/mock-05.png'
 
