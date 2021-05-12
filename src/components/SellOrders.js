@@ -1,32 +1,90 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { Spinner } from 'reactstrap'
 import DataTable from 'react-data-table-component';
+import axios from 'axios'
+import Moment from 'react-moment'
 
-const data = [{ id: 1, title: 'Conan the Barbarian', summary: 'Orphaned boy Conan is enslaved after his village is destroyed...',  year: '1982' }];
+// const data = [{ id: 1, title: 'Conan the Barbarian', summary: 'Orphaned boy Conan is enslaved after his village is destroyed...',  year: '1982' }];
 const columns = [
   {
-    name: 'Title',
+    name: 'Buyer ID',
+    selector: 'buyer_id',
     sortable: true,
-    cell: row => <div data-tag="allowRowEvents"><div style={{ fontWeight: 'bold' }}>{row.title}</div>{row.summary}</div>,
   },
   {
-    name: 'Year',
-    selector: 'year',
+    name: 'Coin Type',
+    selector: 'coin_type',
     sortable: true,
-    right: true,
+  },
+  {
+    name: 'Volume',
+    selector: 'amount',
+    sortable: true,
+  },
+  {
+    name: 'Negotiable',
+    selector: 'negotiable',
+    cell: (row) => (<span>{
+        row.negotiable === false ? (<span> No </span>): (<span>Yes</span>)
+    }</span>),
+    sortable: true,
+  },
+  {
+    name: 'Date',
+    selector: 'date_created',
+    cell: (row) => (<span><Moment format="D MMM YYYY, h:mm:ss">{row.date_created}</Moment></span>),
+    sortable: true,
   },
 ];
 
-
 const SellOrders = () => {
+
+  const [sellOffers, setSellOffers] = useState([])
+  const [loading, setLoading] = useState(true)
+
+  const getSellOffers = async () => {
+    try {
+        const config = {
+            headers: {
+                's-signature': process.env.REACT_APP_API_SECRET,
+                'Content-Type': 'application/json',
+            }
+        }
+        const offers = await axios.get('https://surtii.com/v1/scale.ai/offers/sell', config)
+
+        const data = offers.data.data
+
+        setSellOffers(data)
+        setLoading(false)
+
+    } catch (err) {
+        console.log(err)
+    }
+ 
+}
+
+useEffect(() => {
+    getSellOffers()
+    
+}, [])
+
     return (
         <div className="sell-orders">
-            <DataTable
-                columns={columns}
-                data={data}
-                defaultSortField="true"
-                selectableRows
-                highlightOnHover
-            />
+
+            {
+              loading ? (
+                   <Spinner style={{ width: '3rem', height: '3rem', top: '50%', left: '47%', position: "absolute" }} />
+              ):(
+                <DataTable
+                    columns={columns}
+                    data={sellOffers}
+                    defaultSortField="true"
+                    selectableRows
+                    highlightOnHover
+                    pagination
+                />
+              )
+            }
         </div>
     )
 }
