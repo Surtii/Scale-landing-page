@@ -78,7 +78,7 @@ const Transactions = ({match}) => {
         <Layout>
             <Helmet>
                 <title>Transaction History</title>
-                <meta name="title" content="Scale - Transaction History"/>
+                <meta name="title" content="ScaleX - Transaction History"/>
                 <meta name="description" content="ScaleX ensures you can securely and seamlessly buy and sell cryptocurrencies from anyone, anytime, anywhere."/>
             </Helmet>
             <div className="transactions">

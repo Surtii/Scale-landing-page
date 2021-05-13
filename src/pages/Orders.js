@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from "react-helmet";
 import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Col, Container } from 'reactstrap';
 import classnames from 'classnames';
 import Layout from '../components/Layout'
@@ -13,6 +14,11 @@ const Orders = () => {
     }
     return (
         <Layout>
+            <Helmet>
+                <title>Offers</title>
+                <meta name="title" content="ScaleX - Offers"/>
+                <meta name="description" content="ScaleX ensures you can securely and seamlessly buy and sell cryptocurrencies from anyone, anytime, anywhere."/>
+            </Helmet>
             <div className="orders">
                 <Container>
                     <Row>
