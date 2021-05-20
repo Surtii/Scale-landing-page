@@ -47,6 +47,7 @@ const columns = [
     ignoreRowClick: true,
     allowOverflow: true
   },
+  
 ];
 
 const BuyOrders = () => {
