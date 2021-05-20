@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import { Spinner } from 'reactstrap'
+import { Spinner, Button } from 'reactstrap'
 import DataTable from 'react-data-table-component';
 import axios from 'axios'
 import Moment from 'react-moment'
 
 
-// const data = [{ id: 1, title: 'Conan the Barbarian', summary: 'Orphaned boy Conan is enslaved after his village is destroyed...',  year: '1982' }];
 const columns = [
   {
     name: 'Buyer ID',
@@ -23,6 +22,11 @@ const columns = [
     sortable: true,
   },
   {
+    name: 'Rate',
+    selector: 'rate_in_fiat',
+    sortable: true,
+  },
+  {
     name: 'Negotiable',
     selector: 'negotiable',
     cell: (row) => (<span>{
@@ -35,6 +39,13 @@ const columns = [
     selector: 'date_created',
     cell: (row) => (<span><Moment format="D MMM YYYY, h:mm:ss">{row.date_created}</Moment></span>),
     sortable: true,
+  },
+  {
+    name: 'Action',
+    cell: (row) => (<a href={`https://t.me/ScaleXP2PBot?start=q_${row.transaction_id}`}><Button color="success">Buy</Button></a>),
+    button: true,
+    ignoreRowClick: true,
+    allowOverflow: true
   },
 ];
 
