@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Spinner, Button } from 'reactstrap'
 import DataTable from 'react-data-table-component';
+import DataTableExtensions from 'react-data-table-component-extensions';
 import axios from 'axios'
 import Moment from 'react-moment'
 
@@ -77,7 +78,7 @@ const SellOrders = () => {
 useEffect(() => {
     getSellOffers()
     
-}, [])
+}, [sellOffers])
 
     return (
         <div className="sell-orders">
@@ -86,13 +87,21 @@ useEffect(() => {
               loading ? (
                    <Spinner style={{ width: '3rem', height: '3rem', top: '50%', left: '47%', position: "absolute" }} />
               ):(
-                <DataTable
-                    columns={columns}
-                    data={sellOffers}
-                    defaultSortField="true"
-                    highlightOnHover
-                    pagination
-                />
+                <DataTableExtensions
+                  columns={columns}
+                  data={sellOffers}
+                  export={false}
+                  print={false}
+                  filterPlaceholder="Search Coin"
+                >
+                  <DataTable
+                      defaultSortField="true"
+                      highlightOnHover
+                      pagination
+                      persistTableHead
+                      noHeader
+                  />
+                </DataTableExtensions>
               )
             }
         </div>

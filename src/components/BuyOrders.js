@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Spinner, Button } from 'reactstrap'
 import DataTable from 'react-data-table-component';
+import DataTableExtensions from 'react-data-table-component-extensions';
 import axios from 'axios'
 import Moment from 'react-moment'
 
@@ -50,18 +51,19 @@ const columns = [
   
 ];
 
-const BuyOrders = () => {
 
+const BuyOrders = () => {
   const [buyOffers, setBuyOffers] = useState([])
   const [loading, setLoading] = useState(true)
 
-  const getBuyOffers = async () => {
-    try {
+
+const getBuyOffers = async () => {
+  try {
         const config = {
-            headers: {
-                's-signature': process.env.REACT_APP_API_SECRET,
-                'Content-Type': 'application/json',
-            }
+          headers: {
+              's-signature': process.env.REACT_APP_API_SECRET,
+              'Content-Type': 'application/json',
+          }
         }
         const offers = await axios.get('https://surtii.com/v1/scale.ai/offers/buy', config)
 
@@ -71,34 +73,42 @@ const BuyOrders = () => {
         setLoading(false)
 
     } catch (err) {
-        console.log(err)
-    }
- 
+      console.log(err)
+  }
 }
 
 useEffect(() => {
-    getBuyOffers()
-    
-}, [])
+    getBuyOffers();
+}, [buyOffers])
 
-    return (
-        <div className="buy-orders">
+
+
+  return (
+      <div className="buy-orders" >
         {
           loading ? (
-               <Spinner style={{ width: '3rem', height: '3rem', top: '50%', left: '47%', position: "absolute" }} />
+                <Spinner style={{ width: '3rem', height: '3rem', top: '50%', left: '47%', position: "absolute" }} />
           ):(
+            <DataTableExtensions
+              columns={columns}
+              data={buyOffers}
+              export={false}
+              print={false}
+              filterPlaceholder="Search Coin"
+            >
               <DataTable
-                columns={columns}
-                data={buyOffers}
                 defaultSortField="true"
                 highlightOnHover
                 pagination
+                persistTableHead
+                noHeader
               />
+            </DataTableExtensions>
             )
         }
-            
-        </div>
-    )
+          
+      </div>
+  )
 }
 
 export default BuyOrders
