@@ -82,7 +82,6 @@ useEffect(() => {
 }, [buyOffers])
 
 
-
   return (
       <div className="buy-orders" >
         {
