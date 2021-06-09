@@ -8,8 +8,8 @@ import Moment from 'react-moment'
 
 const columns = [
   {
-    name: 'Buyer ID',
-    selector: 'buyer_id',
+    name: 'Seller ID',
+    selector: 'seller_id',
     sortable: true,
   },
   {
@@ -53,24 +53,31 @@ const columns = [
 
 
 const BuyOrders = () => {
-  const [buyOffers, setBuyOffers] = useState([])
+  const [buyOffers, setBuyOffers] = useState(null)
   const [loading, setLoading] = useState(true)
 
 
 const getBuyOffers = async () => {
   try {
+      let isSubscribed = true;
+
         const config = {
           headers: {
               's-signature': process.env.REACT_APP_API_SECRET,
               'Content-Type': 'application/json',
           }
         }
-        const offers = await axios.get('https://surtii.com/v1/scale.ai/offers/buy', config)
+       
+        if(isSubscribed){
+          const offers = await axios.get('https://surtii.com/v1/scale.ai/offers/buy', config)
 
-        const data = offers.data.data
+          const data = offers.data.data
+  
+          setBuyOffers(data)
+          setLoading(false)
+        }
 
-        setBuyOffers(data)
-        setLoading(false)
+        return () => isSubscribed = false
 
     } catch (err) {
       console.log(err)
@@ -79,7 +86,7 @@ const getBuyOffers = async () => {
 
 useEffect(() => {
     getBuyOffers();
-}, [buyOffers])
+}, [])
 
 
   return (

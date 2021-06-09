@@ -52,7 +52,7 @@ const Home = () => {
                             <h2>Messenger chatbot <br/>for P2P cryptocurrency exchange</h2>
                             <p className="col-lg-12 col-md-10 col-sm-12">ScaleX ensures you can securely and seamlessly buy and sell cryptocurrencies from anyone, anytime, anywhere.</p>
                             <ul className="button-group clearfix">
-                              <li><a href="http://t.me/ScaleXP2PBot">Trade Now</a></li>
+                              <li><a href="https://www.scalex.africa/orders">Trade Now</a></li>
                             </ul>
                           </div>
                       </div>
@@ -147,7 +147,7 @@ const Home = () => {
                             <h6>You don’t need to download another App!</h6>
                             <p>Telegram is fast becoming a go-to marketplace for cryptocurrency exchanges. As such, ScaleX Chatbot is modelled around your day-to-day conversations during a P2P crypto transaction on Telegram and other messenger platforms.</p>
                             <ul className="button-group">
-                              <li><a href="http://t.me/ScaleXP2PBot">Start trading</a></li>
+                              <li><a href="https://www.scalex.africa/orders">Start trading</a></li>
                             </ul>
                           </div> 
                         </div>
