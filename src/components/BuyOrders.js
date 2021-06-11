@@ -19,8 +19,9 @@ const columns = [
   },
   {
     name: 'Volume',
-    selector: 'amount',
+    selector: 'available_amount',
     sortable: true,
+    cell: (row) => <span>{row.available_amount.toFixed(4)}</span>
   },
   {
     name: 'Rate',
