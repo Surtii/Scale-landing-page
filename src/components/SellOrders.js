@@ -18,7 +18,7 @@ const columns = [
   },
   {
     name: 'Volume',
-    selector: 'amount',
+    selector: 'available_amount',
     sortable: true,
   },
   {
