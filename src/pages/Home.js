@@ -9,8 +9,9 @@ import { options,  option2, option3} from '../utils/carousel'
 import AllPrices from '../components/AllPrices'
 import Navbar from '../components/Navbar';
 
-import Mock04 from '../images/mock-04.png'
-import Mock05 from '../images/mock-05.png'
+import Mock04 from '../images/scalex-telegram-01.png'
+import Mock05 from '../images/scalex-telegram-02.png'
+import Mock06 from '../images/scalex-telegram-03.png'
 
 import Security from '../images/security.svg';
 import Trust from '../images/trust.svg';
@@ -35,7 +36,7 @@ const Home = () => {
         <div>
           <Helmet>
             <title>ScaleX - Messenger chatbot for P2P cryptocurrency exchange</title>
-            <meta name="title" content="Scale - Messenger chatbot for P2P cryptocurrency exchange"/>
+            <meta name="title" content="ScaleX - Messenger chatbot for P2P cryptocurrency exchange"/>
             <meta name="description" content="ScaleX ensures you can securely and seamlessly buy and sell cryptocurrencies from anyone, anytime, anywhere."/>
           </Helmet>
           <div className="main-page-wrapper">
@@ -139,7 +140,7 @@ const Home = () => {
                     <div className="inner-wrapper">
                       <div className="row">
                         <div className="col-lg-5">
-                          <img src={Mock04} width="358" height="500" alt="Seller's Conversation" className="mockup-01" data-aos="fade-down" data-aos-duration="2500"/>
+                          <img src={Mock06} width="358" height="500" alt="Seller's Conversation" className="mockup-01" data-aos="fade-down" data-aos-duration="2500"/>
                         </div>
                         <div className="col-lg-7 ">
                           <div className="text">

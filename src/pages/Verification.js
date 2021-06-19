@@ -112,7 +112,7 @@ const Verification = ({match}) => {
         <Layout>
             <Helmet>
                 <title>Tier 1 Verification</title>
-                <meta name="title" content="Scale - Tier 1 Verification"/>
+                <meta name="title" content="ScaleX - Tier 1 Verification"/>
                 <meta name="description" content="ScaleX ensures you can securely and seamlessly buy and sell cryptocurrencies from anyone, anytime, anywhere."/>
             </Helmet>
             <div className="contact-us-one" id="contact">
