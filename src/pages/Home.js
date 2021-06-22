@@ -53,7 +53,7 @@ const Home = () => {
                             <h2>Messenger chatbot <br/>for P2P cryptocurrency exchange</h2>
                             <p className="col-lg-12 col-md-10 col-sm-12">ScaleX ensures you can securely and seamlessly buy and sell cryptocurrencies from anyone, anytime, anywhere.</p>
                             <ul className="button-group clearfix">
-                              <li><a href="https://www.scalex.africa/orders">Trade Now</a></li>
+                              <li><a href="https://t.me/scalexp2pbot">Trade Now</a></li>
                             </ul>
                           </div>
                       </div>
