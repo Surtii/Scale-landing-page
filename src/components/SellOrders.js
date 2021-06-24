@@ -55,6 +55,25 @@ const SellOrders = () => {
   const [sellOffers, setSellOffers] = useState(null)
   const [loading, setLoading] = useState(true)
 
+  // function formatCoin(coin_type){
+  //   let format_coin_type;
+  //   if(coin_type === USDT_COIN_ERC_20){
+  //               format_coin_type = "USDT (ERC20)";
+  //           }else if(coin_type === ETH_COIN_BEP_20){
+  //               format_coin_type = "ETH (BEP20)";
+  //           }else if(coin_type === USDT_COIN_BEP_20){
+  //               format_coin_type = "USDT (BEP20)";
+  //           }else if(coin_type === BTC_COIN_BEP_20){
+  //               format_coin_type = "BTC (BEP20)";
+  //           }else if(coin_type === USDT_COIN_TRON){
+  //               format_coin_type = "USDT (TRC20)";
+  //           }else{
+  //               format_coin_type = coin_type;
+  //           }
+
+  //   return format_type;
+  // }
+
   const getSellOffers = async () => {
     try {
 
