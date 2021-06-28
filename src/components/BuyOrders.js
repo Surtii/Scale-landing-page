@@ -74,7 +74,7 @@ const filterCoin =  useMemo(() => buyOffers.filter((offer) => {
             {
               filterCoin.map((offer, i) => (
                 <Col lg={4} md={6} sm={4} key={i}  className="my-5">
-                  <Card body className="sell-card">
+                  <Card body className="buy-card">
                     <div className="d-flex justify-content-between">
                         <div className="order-right">
                           <p>Coin Type: <span>{offer.coin_type} </span></p>
@@ -88,7 +88,7 @@ const filterCoin =  useMemo(() => buyOffers.filter((offer) => {
                             <p>Buyer ID: <span>{offer.seller_id} </span></p>
                           </div>
                           <div >
-                          <a href={`https://t.me/ScaleXP2PBot?start=q_${offer.transaction_id}`}><Button color="danger" className="sell-button">Sell</Button></a>
+                          <a href={`https://t.me/ScaleXP2PBot?start=q_${offer.transaction_id}`}><Button color="success">Sell</Button></a>
                           </div>
                         </div>
                     </div>
