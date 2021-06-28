@@ -1983,18 +1983,57 @@ body .theme-button:hover span {opacity: 1;}
 
 .orders .nav-tabs .nav-link:hover{
   border-color: transparent !important;
-  border-bottom: 0px solid #0d27ab;
+  border-bottom: 0px solid #000;
 
 }
 
 .orders .nav-tabs .nav-link.active{
-  color: #0d27ab !important;
+  color: #000 !important;
   background-color: transparent !important;
   border-color: transparent !important;
-  border-bottom: 2px solid #0d27ab !important;
+  border-bottom: 2px solid #000 !important;
 
 }
 
 .orders a{
   color: #151515;
 }
+
+.buy-card{
+  border-radius: 10px !important;
+  border: 1px solid #1e7e34 !important;
+}
+
+.buy-card p{
+  font-size: 13px;
+  margin-bottom: .5rem;
+  line-height: 1.5;
+}
+
+.buy-card span{
+  font-weight: 600;
+}
+
+
+.sell-card{
+  border-radius: 10px !important;
+  border: 1px solid #b30606 !important;
+}
+
+.sell-card p{
+  font-size: 13px;
+  margin-bottom: .5rem;
+  line-height: 1.5;
+}
+
+.sell-card span{
+  font-weight: 600;
+}
+
+.sell-button{
+  background-color: #b30606 !important;
+}
+
+
+
+

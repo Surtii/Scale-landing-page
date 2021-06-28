@@ -24,7 +24,7 @@ const Orders = () => {
             <div className="orders">
                 <Container>
                     <Row>
-                        <Col lg={{ size:8, offset: 2 }}>
+                        <Col >
                             <Nav tabs>
                                 <NavItem>
                                     <NavLink

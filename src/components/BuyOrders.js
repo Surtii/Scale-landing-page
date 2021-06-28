@@ -1,56 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { Spinner, Button } from 'reactstrap'
-import DataTable from 'react-data-table-component';
-import DataTableExtensions from 'react-data-table-component-extensions';
+import { Spinner, Button, Card, Row, Col} from 'reactstrap'
 import axios from 'axios'
-import Moment from 'react-moment'
-
-
-const columns = [
-  {
-    name: 'Seller ID',
-    selector: 'seller_id',
-    sortable: true,
-  },
-  {
-    name: 'Coin Type',
-    selector: 'coin_type',
-    sortable: true,
-  },
-  {
-    name: 'Volume',
-    selector: 'available_amount',
-    sortable: true,
-    cell: (row) => <span>{row.available_amount.toFixed(4)}</span>
-  },
-  {
-    name: 'Rate',
-    selector: 'rate_in_fiat',
-    sortable: true,
-  },
-  {
-    name: 'Negotiable',
-    selector: 'negotiable',
-    cell: (row) => (<span>{
-        row.negotiable === false ? (<span> No </span>): (<span>Yes</span>)
-    }</span>),
-    sortable: true,
-  },
-  {
-    name: 'Date',
-    selector: 'date_created',
-    cell: (row) => (<span><Moment format="D MMM YYYY, h:mm:ss">{row.date_created}</Moment></span>),
-    sortable: true,
-  },
-  {
-    name: 'Action',
-    cell: (row) => (<a href={`https://t.me/ScaleXP2PBot?start=q_${row.transaction_id}`}><Button color="success">Buy</Button></a>),
-    button: true,
-    ignoreRowClick: true,
-    allowOverflow: true
-  },
-  
-];
 
 
 const BuyOrders = () => {
@@ -73,6 +23,8 @@ const getBuyOffers = async () => {
           const offers = await axios.get('https://surtii.com/v1/scale.ai/offers/buy', config)
 
           const data = offers.data.data
+
+          console.log(data)
   
           setBuyOffers(data)
           setLoading(false)
@@ -96,21 +48,35 @@ useEffect(() => {
           loading ? (
                 <Spinner style={{ width: '3rem', height: '3rem', top: '50%', left: '47%', position: "absolute" }} />
           ):(
-            <DataTableExtensions
-              columns={columns}
-              data={buyOffers}
-              export={false}
-              print={false}
-              filterPlaceholder="Search Coin"
-            >
-              <DataTable
-                defaultSortField="true"
-                highlightOnHover
-                pagination
-                persistTableHead
-                noHeader
-              />
-            </DataTableExtensions>
+              <Row>
+                {
+                  buyOffers.map((offer, i) => (
+                    <Col lg={4} md={6} sm={4} key={i}  className="my-5">
+                      <Card body className="buy-card">
+                        <div className="d-flex justify-content-between">
+                            <div className="order-right">
+                              <p>Coin Type: <span>{offer.coin_type} </span></p>
+                              <p>Amount: <span>{offer.amount} </span></p>
+                              <p>Price in Naira(₦) : <span>{offer.rate_in_fiat} </span></p>
+                              <p>Minimum Payment: <span> ₦{offer.minimum_limit} </span></p>
+                            </div>
+                            
+                            <div className="d-flex flex-column justify-content-between align-items-end">
+                              <div>
+                                <p>Seller ID: <span>{offer.seller_id} </span></p>
+                              </div>
+                              <div >
+                                <a href={`https://t.me/ScaleXP2PBot?start=q_${offer.transaction_id}`}><Button color="success">Buy</Button></a>
+                              </div>
+                            </div>
+                        </div>
+                      </Card>
+                    </Col>
+                  ))
+                }
+              </Row>
+            
+
             )
         }
           

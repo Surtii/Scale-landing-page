@@ -1,59 +1,16 @@
-import React, { useState, useEffect } from 'react'
-import { Spinner, Button } from 'reactstrap'
-import DataTable from 'react-data-table-component';
-import DataTableExtensions from 'react-data-table-component-extensions';
+import React, { useState, useEffect, Fragment, useMemo } from 'react'
+import { Spinner, Input, Button, Card, Row, Col} from 'reactstrap'
 import axios from 'axios'
-import Moment from 'react-moment'
-
-const columns = [
-  {
-    name: 'Buyer ID',
-    selector: 'buyer_id',
-    sortable: true,
-  },
-  {
-    name: 'Coin Type',
-    selector: 'coin_type',
-    sortable: true,
-  },
-  {
-    name: 'Volume',
-    selector: 'available_amount',
-    cell: (row) => <span>{row.available_amount.toFixed(4)}</span>,
-    sortable: true,
-  },
-  {
-    name: 'Rate',
-    selector: 'rate_in_fiat',
-    sortable: true,
-  },
-  {
-    name: 'Negotiable',
-    selector: 'negotiable',
-    cell: (row) => (<span>{
-        row.negotiable === false ? (<span> No </span>): (<span>Yes</span>)
-    }</span>),
-    sortable: true,
-  },
-  {
-    name: 'Date',
-    selector: 'date_created',
-    cell: (row) => (<span><Moment format="D MMM YYYY, h:mm:ss">{row.date_created}</Moment></span>),
-    sortable: true,
-  },
-  {
-    name: 'Action',
-    cell: (row) => (<a href={`https://t.me/ScaleXP2PBot?start=q_${row.transaction_id}`}><Button color="danger">Sell</Button></a>),
-    button: true,
-    ignoreRowClick: true,
-    allowOverflow: true
-  },
-];
 
 const SellOrders = () => {
 
-  const [sellOffers, setSellOffers] = useState(null)
+  const [sellOffers, setSellOffers] = useState([])
   const [loading, setLoading] = useState(true)
+  const [search, setSearch] = useState('')
+
+  const onSearchChange = (event) => {
+    setSearch(event.target.value )
+  }
 
   // function formatCoin(coin_type){
   //   let format_coin_type;
@@ -88,7 +45,7 @@ const SellOrders = () => {
           const offers = await axios.get('https://surtii.com/v1/scale.ai/offers/sell', config)
 
           const data = offers.data.data
-
+          console.log(data)
           setSellOffers(data)
           setLoading(false)
         }
@@ -101,36 +58,70 @@ const SellOrders = () => {
  
 }
 
-useEffect(() => {
-    getSellOffers()
-}, [])
 
-    return (
-        <div className="sell-orders">
 
+  useEffect(() => {
+      getSellOffers()
+  }, [])
+
+
+
+  const filterCoin =  useMemo(() => sellOffers.filter((offer) => {
+    return offer.coin_type.toLowerCase().includes(search.toLowerCase());
+  }), [sellOffers, search])
+
+  console.log(filterCoin)
+  return (
+      <div className="sell-orders">
+
+          {
+            loading ? (
+                  <Spinner style={{ width: '3rem', height: '3rem', top: '50%', left: '47%', position: "absolute" }} />
+            ):(
+              <Fragment>
+              <Row>
+              <Col md={{ size: 6, offset: 3 }}>
+                  <Input 
+                  className="mt-5"
+                  type='search'
+                  placeholder='search coin. Eg. BTC'
+                  onChange={onSearchChange}
+                />
+              </Col>
+            </Row>
+            <Row>
+            
             {
-              loading ? (
-                   <Spinner style={{ width: '3rem', height: '3rem', top: '50%', left: '47%', position: "absolute" }} />
-              ):(
-                <DataTableExtensions
-                  columns={columns}
-                  data={sellOffers}
-                  export={false}
-                  print={false}
-                  filterPlaceholder="Search Coin"
-                >
-                  <DataTable
-                      defaultSortField="true"
-                      highlightOnHover
-                      pagination
-                      persistTableHead
-                      noHeader
-                  />
-                </DataTableExtensions>
-              )
+              filterCoin.map((offer, i) => (
+                <Col lg={4} md={6} sm={4} key={i}  className="my-5">
+                  <Card body className="sell-card">
+                    <div className="d-flex justify-content-between">
+                        <div className="order-right">
+                          <p>Coin Type: <span>{offer.coin_type} </span></p>
+                          <p>Amount: <span>{offer.amount} </span></p>
+                          <p>Price in Naira(₦) : <span>{offer.rate_in_fiat} </span></p>
+                          <p>Minimum Payment: <span> ₦{offer.minimum_limit} </span></p>
+                        </div>
+                        
+                        <div className="d-flex flex-column justify-content-between align-items-end">
+                          <div>
+                            <p>Buyer ID: <span>{offer.buyer_id} </span></p>
+                          </div>
+                          <div >
+                          <a href={`https://t.me/ScaleXP2PBot?start=q_${offer.transaction_id}`}><Button color="danger" className="sell-button">Sell</Button></a>
+                          </div>
+                        </div>
+                    </div>
+                  </Card>
+                </Col>
+              ))
             }
-        </div>
-    )
+          </Row>
+              </Fragment>
+            )
+          }
+      </div>
+  )
 }
 
 export default SellOrders
