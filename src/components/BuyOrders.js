@@ -60,7 +60,7 @@ const filterCoin =  useMemo(() => buyOffers.filter((offer) => {
           ):(
             <Fragment>
             <Row>
-              <Col md={{ size: 6, offset: 3 }}>
+              <Col md={{ size: 6, offset: 3 }} className="mb-3">
                   <Input 
                   className="mt-5"
                   type='search'
@@ -73,7 +73,7 @@ const filterCoin =  useMemo(() => buyOffers.filter((offer) => {
             
             {
               filterCoin.map((offer, i) => (
-                <Col lg={4} md={6} sm={4} key={i}  className="my-5">
+                <Col lg={4} md={6} sm={4} key={i}   className="my-2">
                   <Card body className="buy-card">
                     <div className="d-flex justify-content-between">
                         <div className="order-right">
