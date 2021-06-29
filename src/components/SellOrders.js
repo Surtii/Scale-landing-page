@@ -1,16 +1,24 @@
 import React, { useState, useEffect, Fragment, useMemo } from 'react'
 import { Spinner, Input, Button, Card, Row, Col} from 'reactstrap'
 import axios from 'axios'
+import OrderPagination from './OrderPagination'
 
 const SellOrders = () => {
 
   const [sellOffers, setSellOffers] = useState([])
   const [loading, setLoading] = useState(true)
   const [search, setSearch] = useState('')
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(10);
+
 
   const onSearchChange = (event) => {
     setSearch(event.target.value )
   }
+
+  
+  // Change Page
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   // function formatCoin(coin_type){
   //   let format_coin_type;
@@ -30,6 +38,7 @@ const SellOrders = () => {
 
   //   return format_type;
   // }
+
 
   const getSellOffers = async () => {
     try {
@@ -70,6 +79,14 @@ const SellOrders = () => {
     return offer.coin_type.toLowerCase().includes(search.toLowerCase());
   }), [sellOffers, search])
 
+    
+const indexOfLastPost = currentPage * postsPerPage;
+const indexOfFirstPost = indexOfLastPost - postsPerPage;
+const currentPosts = filterCoin.slice(indexOfFirstPost, indexOfLastPost);
+
+
+
+
 
 
   return (
@@ -93,7 +110,7 @@ const SellOrders = () => {
                   <Row>
                   
                   {
-                    filterCoin.map((offer, i) => (
+                    currentPosts.map((offer, i) => (
                       <Col lg={4} md={6} sm={4} key={i}  className="my-2">
                         <Card body className="sell-card">
                           <div className="d-flex justify-content-between">
@@ -118,6 +135,23 @@ const SellOrders = () => {
                     ))
                   }
                 </Row>
+
+                <Row>
+                    <Col className="mt-3">
+                      {
+                        filterCoin.length > 0 ? (
+                          <OrderPagination
+                            postsPerPage={postsPerPage} 
+                            totalPosts={filterCoin.length} 
+                            paginate={paginate} 
+                          />
+                         
+                        ): (
+                          <p className="text-center">No trade available</p>
+                        )
+                      }
+                    </Col>
+                  </Row>
               </Fragment>
             )
           }

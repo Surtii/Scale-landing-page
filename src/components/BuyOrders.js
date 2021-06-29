@@ -1,12 +1,19 @@
 import React, { useState, useEffect, Fragment, useMemo } from 'react'
 import { Spinner, Input, Button, Card, Row, Col} from 'reactstrap'
 import axios from 'axios'
+import OrderPagination from './OrderPagination'
 
 
 const BuyOrders = () => {
   const [buyOffers, setBuyOffers] = useState([])
   const [loading, setLoading] = useState(true)
   const [search, setSearch] = useState('')
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(10);
+
+
+  // Change Page
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   const onSearchChange = (event) => {
     setSearch(event.target.value )
@@ -52,6 +59,11 @@ const filterCoin =  useMemo(() => buyOffers.filter((offer) => {
 }), [buyOffers, search])
 
 
+const indexOfLastPost = currentPage * postsPerPage;
+const indexOfFirstPost = indexOfLastPost - postsPerPage;
+const currentPosts = filterCoin.slice(indexOfFirstPost, indexOfLastPost);
+
+
   return (
       <div className="buy-orders" >
         {
@@ -72,7 +84,7 @@ const filterCoin =  useMemo(() => buyOffers.filter((offer) => {
             <Row>
             
             {
-              filterCoin.map((offer, i) => (
+              currentPosts.map((offer, i) => (
                 <Col lg={4} md={6} sm={4} key={i}   className="my-2">
                   <Card body className="buy-card">
                     <div className="d-flex justify-content-between">
@@ -96,6 +108,23 @@ const filterCoin =  useMemo(() => buyOffers.filter((offer) => {
                 </Col>
               ))
             }
+
+          </Row>
+          <Row>
+            <Col className="mt-3">
+            {
+              filterCoin.length > 0 ? (
+                <OrderPagination
+                  postsPerPage={postsPerPage} 
+                  totalPosts={filterCoin.length} 
+                  paginate={paginate} 
+                />
+               
+              ): (
+                <p className="text-center">No trade available</p>
+              )
+            }
+            </Col>
           </Row>
         </Fragment>
             

@@ -2034,6 +2034,8 @@ body .theme-button:hover span {opacity: 1;}
   background-color: #b30606 !important;
 }
 
-
+.pagination{
+  justify-content: center !important;
+}
 
 
