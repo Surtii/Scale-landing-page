@@ -144,7 +144,7 @@ const Converter = () => {
                                             </Col>
                                             <Col md={3}>
                                                 <FormGroup>
-                                                    <Button type="submit" color="primary">Convert</Button>  
+                                                    <Button type="submit" color="primary" block>Convert</Button>  
                                                     
                                                 </FormGroup>
                                             </Col>
