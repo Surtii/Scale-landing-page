@@ -145,12 +145,21 @@ const Converter = () => {
                                             <Col md={3}>
                                                 <FormGroup>
                                                     <Button type="submit" color="primary">Convert</Button>  
-                                                    <p> = ₦ {result}</p> 
+                                                    
                                                 </FormGroup>
                                             </Col>
                                         </Row>
                                     </Form>
                                 </div>
+                            </div>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                            <div className="d-flex justify-content-center">
+                                <div className="result-wrapper">
+                                    <p className="text-center result"> = ₦ {result}</p>
+                                </div> 
                             </div>
                         </Col>
                     </Row>
