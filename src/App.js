@@ -12,6 +12,7 @@ import Home from "./pages/Home";
 import Verification from "./pages/Verification";
 import Transactions from "./pages/Transactions";
 import Orders from "./pages/Orders";
+import Converter from "./pages/Converter";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route exact path="/verification/tier-2/:id" component={Verification}/>
         <Route exact path="/transactions/:id" component={Transactions}/>
         <Route exact path="/orders" component={Orders}/>
+        <Route exact path="/converter" component={Converter}/>
       </Switch>
     </Router>
   );

@@ -6,7 +6,6 @@ import Layout from '../components/Layout'
 import BuyOrders from '../components/BuyOrders';
 import SellOrders from '../components/SellOrders';
 
-import 'react-data-table-component-extensions/dist/index.css';
 
 const Orders = () => {
     const [activeTab, setActiveTab] = useState('1');

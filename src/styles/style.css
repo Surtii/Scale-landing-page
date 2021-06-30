@@ -2039,3 +2039,16 @@ body .theme-button:hover span {opacity: 1;}
 }
 
 
+/* Converter */
+
+.converter{
+  padding: 6rem 0rem;
+}
+
+.input-label{
+  font-size: 12px;
+}
+
+.converter-wrapper form ::placeholder{
+  font-size: 12px;
+}
