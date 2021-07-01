@@ -2062,3 +2062,7 @@ body .theme-button:hover span {opacity: 1;}
   font-size: 24px;
  margin-bottom: 0rem;
 }
+
+.note{
+  font-size: 12px;
+}

@@ -58,7 +58,7 @@ const Converter = () => {
 
                     setPrice(data)
 
-                    console.log(coin)
+                    console.log(data)
                 }
                 
         
@@ -160,6 +160,13 @@ const Converter = () => {
                                 <div className="result-wrapper">
                                     <p className="text-center result"> = ₦ {result}</p>
                                 </div> 
+                            </div>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                            <div className="d-flex justify-content-center">
+                                <p className="text-center note mt-5"> Note: Price data used is from <a href="https://coinbase.com/">Coinbase</a></p>
                             </div>
                         </Col>
                     </Row>
