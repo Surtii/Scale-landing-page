@@ -54,7 +54,7 @@ const SellOrders = () => {
           const offers = await axios.get('https://surtii.com/v1/scale.ai/offers/sell', config)
 
           const data = offers.data.data
-          
+          console.log(data)
           setSellOffers(data)
           setLoading(false)
         }
@@ -116,9 +116,10 @@ const currentPosts = filterCoin.slice(indexOfFirstPost, indexOfLastPost);
                           <div className="d-flex justify-content-between">
                               <div className="order-right">
                                 <p>Coin Type: <span>{offer.coin_type} </span></p>
-                                <p>Amount: <span>{offer.amount} </span></p>
+                                <p>Quantity: <span>{offer.available_amount} </span></p>
                                 <p>Price in Naira(₦) : <span>{offer.rate_in_fiat} </span></p>
-                                <p>Minimum Payment: <span> ₦{offer.minimum_limit} </span></p>
+                                <p>Min Payment: <span> ₦{offer.minimum_limit} </span></p>
+                                <p>Negotiable: <span> {offer.negotiable === true ? ('Yes') : ('No')} </span></p>
                               </div>
                               
                               <div className="d-flex flex-column justify-content-between align-items-end">

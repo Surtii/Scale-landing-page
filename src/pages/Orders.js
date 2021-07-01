@@ -30,7 +30,7 @@ const Orders = () => {
                                         className={classnames({ active: activeTab === '1' })}
                                         onClick={() => { toggle('1'); }}
                                     >
-                                        Buy Orders
+                                        Buy Order
                                     </NavLink>
                                     </NavItem>
                                     <NavItem>
@@ -38,7 +38,7 @@ const Orders = () => {
                                         className={classnames({ active: activeTab === '2' })}
                                         onClick={() => { toggle('2'); }}
                                     >
-                                        Sell Orders
+                                        Sell Order
                                     </NavLink>
                                 </NavItem>
                             </Nav>

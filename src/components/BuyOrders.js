@@ -90,9 +90,10 @@ const currentPosts = filterCoin.slice(indexOfFirstPost, indexOfLastPost);
                     <div className="d-flex justify-content-between">
                         <div className="order-right">
                           <p>Coin Type: <span>{offer.coin_type} </span></p>
-                          <p>Amount: <span>{offer.amount} </span></p>
+                          <p>Quantity: <span>{offer.available_amount} </span></p>
                           <p>Price in Naira(₦) : <span>{offer.rate_in_fiat} </span></p>
-                          <p>Minimum Payment: <span> ₦{offer.minimum_limit} </span></p>
+                          <p>Min Payment: <span> ₦{offer.minimum_limit} </span></p>
+                          <p>Negotiable: <span> {offer.negotiable === true ? ('Yes') : ('No')} </span></p>
                         </div>
                         
                         <div className="d-flex flex-column justify-content-between align-items-end">
@@ -100,7 +101,7 @@ const currentPosts = filterCoin.slice(indexOfFirstPost, indexOfLastPost);
                             <p>Buyer ID: <span>{offer.seller_id} </span></p>
                           </div>
                           <div >
-                          <a href={`https://t.me/ScaleXP2PBot?start=q_${offer.transaction_id}`}><Button color="success">Sell</Button></a>
+                          <a href={`https://t.me/ScaleXP2PBot?start=q_${offer.transaction_id}`}><Button color="success">Buy</Button></a>
                           </div>
                         </div>
                     </div>
