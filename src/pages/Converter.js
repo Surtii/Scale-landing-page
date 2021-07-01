@@ -83,8 +83,7 @@ const Converter = () => {
         re = re.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')
 
         setResult(re)
-        console.log(formData)
-        console.log(result)
+
     }
 
     return(
@@ -137,7 +136,7 @@ const Converter = () => {
                                                         type="text" 
                                                         name="rate"
                                                         value={rate} 
-                                                        placeholder="₦ to $ exchange rate"
+                                                        placeholder="₦ to $ (E.g. 490)"
                                                         onChange={handleChange}
                                                     />
                                                 </FormGroup>  
@@ -166,7 +165,7 @@ const Converter = () => {
                     <Row>
                         <Col>
                             <div className="d-flex justify-content-center">
-                                <p className="text-center note mt-5"> Note: Price data used is from <a href="https://coinbase.com/">Coinbase</a></p>
+                                <p className="text-center note mt-5"> Note: Price data sourced from <a href="https://coinbase.com/">Coinbase</a></p>
                             </div>
                         </Col>
                     </Row>
