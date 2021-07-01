@@ -54,7 +54,7 @@ const SellOrders = () => {
           const offers = await axios.get('https://surtii.com/v1/scale.ai/offers/sell', config)
 
           const data = offers.data.data
-          console.log(data)
+          // console.log(data)
           setSellOffers(data)
           setLoading(false)
         }

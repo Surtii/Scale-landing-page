@@ -36,7 +36,7 @@ const getBuyOffers = async () => {
 
           const data = offers.data.data
 
-          console.log(data)
+          // console.log(data)
   
           setBuyOffers(data)
           setLoading(false)
