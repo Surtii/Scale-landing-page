@@ -2006,14 +2006,13 @@ body .theme-button:hover span {opacity: 1;}
 }
 
 .buy-card p{
-  font-size: 13px;
+  font-size: 11px;
   margin-bottom: .5rem;
   line-height: 1.5;
 }
 
 .buy-card span{
   font-weight: 600;
-  font-size: 10px;
 }
 
 
@@ -2024,14 +2023,13 @@ body .theme-button:hover span {opacity: 1;}
 }
 
 .sell-card p{
-  font-size: 13px;
+  font-size: 11px;
   margin-bottom: .5rem;
   line-height: 1.5;
 }
 
 .sell-card span{
   font-weight: 600;
-  font-size: 10px;
 }
 
 .sell-button{
