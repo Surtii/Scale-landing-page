@@ -2002,6 +2002,7 @@ body .theme-button:hover span {opacity: 1;}
 .buy-card{
   border-radius: 10px !important;
   border: 1px solid #1e7e34 !important;
+  padding: .8rem !important;
 }
 
 .buy-card p{
@@ -2012,12 +2013,14 @@ body .theme-button:hover span {opacity: 1;}
 
 .buy-card span{
   font-weight: 600;
+  font-size: 10px;
 }
 
 
 .sell-card{
   border-radius: 10px !important;
   border: 1px solid #b30606 !important;
+  padding: .8rem !important;
 }
 
 .sell-card p{
@@ -2028,6 +2031,7 @@ body .theme-button:hover span {opacity: 1;}
 
 .sell-card span{
   font-weight: 600;
+  font-size: 10px;
 }
 
 .sell-button{
