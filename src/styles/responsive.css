@@ -260,3 +260,18 @@
 @media (max-width: 380px) {
   
 }
+
+@media screen and (max-width: 2400px) and (min-width: 800px) {
+  
+  .sell-card p{
+    font-size: 12.5px;
+
+  }
+
+  .buy-card p{
+    font-size: 12.5px;
+    
+  }
+  
+
+}
