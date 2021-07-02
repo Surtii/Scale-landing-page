@@ -20,25 +20,6 @@ const SellOrders = () => {
   // Change Page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-  // function formatCoin(coin_type){
-  //   let format_coin_type;
-  //   if(coin_type === USDT_COIN_ERC_20){
-  //               format_coin_type = "USDT (ERC20)";
-  //           }else if(coin_type === ETH_COIN_BEP_20){
-  //               format_coin_type = "ETH (BEP20)";
-  //           }else if(coin_type === USDT_COIN_BEP_20){
-  //               format_coin_type = "USDT (BEP20)";
-  //           }else if(coin_type === BTC_COIN_BEP_20){
-  //               format_coin_type = "BTC (BEP20)";
-  //           }else if(coin_type === USDT_COIN_TRON){
-  //               format_coin_type = "USDT (TRC20)";
-  //           }else{
-  //               format_coin_type = coin_type;
-  //           }
-
-  //   return format_type;
-  // }
-
 
   const getSellOffers = async () => {
     try {
@@ -53,8 +34,9 @@ const SellOrders = () => {
         if(isSubscribed){
           const offers = await axios.get('https://surtii.com/v1/scale.ai/offers/sell', config)
 
-          const data = offers.data.data
+          let data = offers.data.data
           // console.log(data)
+
           setSellOffers(data)
           setLoading(false)
         }
@@ -85,7 +67,21 @@ const indexOfFirstPost = indexOfLastPost - postsPerPage;
 const currentPosts = filterCoin.slice(indexOfFirstPost, indexOfLastPost);
 
 
-
+const coinType = (coin_type) => {
+  if(coin_type === 'USDT_ERC_20'){
+    return "USDT (ERC20)";
+  }else if(coin_type === 'ETH_BEP_20'){
+      return"ETH (BEP20)";
+  }else if(coin_type === 'USDT_BEP_20'){
+    return   "USDT (BEP20)";
+  }else if(coin_type === 'BTC_BEP_20'){
+     return "BTC (BEP20)";
+  }else if(coin_type === 'USDT_TRON'){
+    return  "USDT (TRC20)";
+  }else {
+    return coin_type
+  }
+}
 
 
 
@@ -115,7 +111,7 @@ const currentPosts = filterCoin.slice(indexOfFirstPost, indexOfLastPost);
                         <Card body className="sell-card">
                           <div className="d-flex justify-content-between">
                               <div className="order-right">
-                                <p>Coin Type: <span>{offer.coin_type} </span></p>
+                                <p>Coin Type: <span>{coinType(offer.coin_type)} </span></p>
                                 <p>Quantity: <span>{offer.available_amount} </span></p>
                                 <p>Price in Naira(₦) : <span>{offer.rate_in_fiat} </span></p>
                                 <p>Min Payment: <span> ₦{offer.minimum_limit} </span></p>

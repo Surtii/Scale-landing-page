@@ -64,6 +64,24 @@ const indexOfFirstPost = indexOfLastPost - postsPerPage;
 const currentPosts = filterCoin.slice(indexOfFirstPost, indexOfLastPost);
 
 
+const coinType = (coin_type) => {
+  if(coin_type === 'USDT_ERC_20'){
+    return "USDT (ERC20)";
+  }else if(coin_type === 'ETH_BEP_20'){
+      return"ETH (BEP20)";
+  }else if(coin_type === 'USDT_BEP_20'){
+    return   "USDT (BEP20)";
+  }else if(coin_type === 'BTC_BEP_20'){
+     return "BTC (BEP20)";
+  }else if(coin_type === 'USDT_TRON'){
+    return  "USDT (TRC20)";
+  }else {
+    return coin_type
+  }
+}
+
+
+
   return (
       <div className="buy-orders" >
         {
@@ -89,7 +107,7 @@ const currentPosts = filterCoin.slice(indexOfFirstPost, indexOfLastPost);
                   <Card body className="buy-card">
                     <div className="d-flex justify-content-between">
                         <div className="order-right">
-                          <p>Coin Type: <span>{offer.coin_type} </span></p>
+                          <p>Coin Type: <span>{coinType(offer.coin_type)}</span></p>
                           <p>Quantity: <span>{offer.available_amount} </span></p>
                           <p>Price in Naira(₦) : <span>{offer.rate_in_fiat} </span></p>
                           <p>Min Payment: <span> ₦{offer.minimum_limit} </span></p>
