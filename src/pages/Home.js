@@ -103,7 +103,7 @@ const Home = () => {
                     <div className="col-lg-6">
                       <div className="text">
                         <div className="number">01</div>
-                        <h2 className="title"><span>Safety First,</span> Always.</h2>
+                        <h2 className="title"><span>Security First,</span> Always.</h2>
                         <p>ScaleX’s primary goal is to ensure transactions are done with ease in a secure environment protected by an Escrow. This was further enhanced by building our infrastructure on the blockchain.</p>
                       </div> 
                     </div> 
