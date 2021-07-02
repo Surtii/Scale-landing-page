@@ -109,8 +109,8 @@ const coinType = (coin_type) => {
                         <div className="order-right">
                           <p>Coin Type: <span>{coinType(offer.coin_type)}</span></p>
                           <p>Quantity: <span>{offer.available_amount} </span></p>
-                          <p>Price in Naira(₦) : <span>{offer.rate_in_fiat} </span></p>
-                          <p>Min Payment: <span> ₦{offer.minimum_limit} </span></p>
+                          <p>Price in Naira(₦) : <span>{offer.rate_in_fiat.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')} </span></p>
+                          <p>Min Payment: <span> ₦{offer.minimum_limit.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')} </span></p>
                           <p>Negotiable: <span> {offer.negotiable === true ? ('Yes') : ('No')} </span></p>
                         </div>
                         
