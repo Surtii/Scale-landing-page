@@ -1,0 +1,275 @@
+.scalex-hero{
+
+
+    &__hero-nav{
+
+
+        
+    }
+
+    &__hero-main{
+        padding: 6rem 0rem;
+
+        &__left{
+
+            &--heading{
+                font-style: normal;
+                font-weight: normal;
+                font-size: 30px;
+                color: $color-black;
+            }
+
+            &--sub-heading{
+                font-size: $font-large;
+                font-weight: bold;
+                color: $color-black;
+            }
+
+            &--paragraph{
+                font-size: $font-small;
+                color: $color-black;
+                padding-right: .5rem;
+                margin: 1.5rem 0rem;
+            }
+        }
+
+        &__right{
+
+            &__wrapper{
+
+                &--phone-image{
+                    margin-top: -4rem;
+                    float: right;
+                }
+
+
+                &__first-card{
+
+
+                    &--right-card{
+                        position: absolute;
+                        right: 20%;
+                        top: -35px;
+                        padding: .5rem;
+                        background: $color-white !important;
+                        border-radius: 9px !important;
+                        z-index: 99;
+                        border: none !important;
+                
+                    }
+
+                    &--coin-image{
+                        padding: .4rem;
+                        margin-right: 1rem;
+                        border-radius: 50%;
+                        box-shadow: 3.2695px 1.08983px 13.078px rgba(27, 89, 160, 0.17);
+
+                        img{
+                            height: 16px;
+                            width: 16px;
+                        }
+                    }
+    
+                    &__values{
+                        padding-right: 4rem;
+    
+                        p{
+                            margin-bottom: 0rem !important;
+                        }
+
+                        &--naira{
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 8px;
+                            color: $color-blue;
+                        }
+
+                        &--dollar{
+                            font-style: normal;
+                            font-weight: 300;
+                            font-size: 6px;
+                        }
+
+                        &--flow{
+                            background: rgba(169, 229, 201, 0.3);
+                            border-radius: 18.0601px;
+                            font-size: 6px;
+                            text-align: center;
+                            padding: .2rem .5rem;
+                        }
+                    }
+    
+                }
+                
+
+                &__second-cards{
+                    position: absolute;
+                    top: 33%;
+                    left: 23%;
+
+                    .card{
+                        padding: .8rem;
+                        border: none !important;
+                        border-radius: 12px;
+                    }
+
+                    &--flow{
+                        background: rgba(169, 229, 201, 0.3);
+                        border-radius: 18.0601px;
+                        font-size: 8px;
+                        text-align: center;
+                        padding: .2rem .8rem;
+                    }
+
+                    &--1{
+                        background: #006CBA;
+                       
+                        
+                        h3{
+                            font-size: 14px;
+                            color: $color-white;
+                            font-weight: normal;
+                            margin-top: .4rem;
+                            margin-bottom: .8rem;
+                        }
+
+                        h5{
+                            font-weight: 600;
+                            font-size: 12px;
+                            color: $color-white;
+                        }
+
+                        h6{
+                            font-weight: 300;
+                            font-size: 10px;
+                            color: $color-white;
+                        }
+
+
+
+                    }
+
+                    &--2{
+                        background: #fafafa;
+
+                        h3{
+                            font-size: 14px;
+                            color: $color-grey;
+                            font-weight: normal;
+                            margin-top: .4rem;
+                            margin-bottom: .8rem;
+                        }
+
+                        h5{
+                            font-weight: 600;
+                            font-size: 12px;
+                            color: $color-blue;
+                        }
+
+                        h6{
+                            font-weight: 300;
+                            font-size: 10px;
+                            color: $color-black;
+                        }
+                    }
+
+                    &--3{
+                        background: #D9E7F8;
+
+                        h3{
+                            font-size: 14px;
+                            color: $color-blue;
+                            font-weight: normal;
+                            margin-top: .4rem;
+                            margin-bottom: .8rem;
+                        }
+
+                        h5{
+                            font-weight: 600;
+                            font-size: 12px;
+                            color: $color-blue;
+                        }
+
+                        h6{
+                            font-weight: 300;
+                            font-size: 10px;
+                            color: $color-blue;
+                        }
+                    }
+                }
+                
+
+                &__third-card{
+
+
+                    &--right-card{
+                        position: absolute;
+                        right: 43%;
+                        top: 66%;
+                        padding: .5rem;
+                        background: $color-white !important;
+                        border-radius: 9px !important;
+                        z-index: 99;
+                        border: none !important;
+                        box-shadow: 3.2695px 1.08983px 13.078px rgba(27, 89, 160, 0.17);
+                
+                    }
+
+                    &--coin-image{
+                        padding: .4rem;
+                        margin-right: 1rem;
+                        border-radius: 50%;
+                        box-shadow: 3.2695px 1.08983px 13.078px rgba(27, 89, 160, 0.17);
+
+                        img{
+                            height: 16px;
+                            width: 16px;
+                        }
+                    }
+    
+                    &__values{
+                        padding-right: 4rem;
+    
+                        p{
+                            margin-bottom: 0rem !important;
+                        }
+
+                        &--naira{
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 8px;
+                            color: $color-blue;
+                        }
+
+                        &--dollar{
+                            font-style: normal;
+                            font-weight: 300;
+                            font-size: 6px;
+                        }
+
+                        &--flow{
+                            background: rgba(169, 229, 201, 0.3);
+                            border-radius: 18.0601px;
+                            font-size: 6px;
+                            text-align: center;
+                            padding: .2rem .5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .coin-bg{
+        background: $color-white;
+        padding: .3rem;
+        box-shadow: 4.1546px 1.38487px 16.6184px rgba(27, 89, 160, 0.17);
+        border-radius: 50%;
+        img{
+            height: 20px;
+            width: 20px;
+            
+        }
+    }
+
+}

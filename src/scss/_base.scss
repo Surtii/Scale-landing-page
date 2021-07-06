@@ -1,0 +1,81 @@
+@import url('../font/stylesheet.css');
+
+
+// Color Declaration
+$color-blue : #206FC9;
+$color-white : #FFFFFF;
+$color-grey : #66788D;
+$color-black: #000000;
+
+
+// Font 
+$font-large: 45px;
+$font-medium: 24px;
+$font-small: 14px;
+
+
+// Media Screen
+$bp-x-largest: 87.5em; //1400px
+$bp-largest: 75em; //1200px
+$bp-bit-large: 64em;  //1024px
+$bp-large: 60.75em; //972x
+$bp-medium: 56.25em; //900px
+$bp-small: 37.5em; //600px
+$bp-smallest: 31.25em; //500px
+$bp-x-small: 20em; //320px
+$bp-xx-small: 17.5em; //280px
+
+
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+    margin: 0;
+    font-family: 'Poppins',-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: $color-white !important;
+    font-size: $font-small !important;
+    color: $color-black !important;
+  
+  
+  }
+  
+
+.navbar-brand{
+    margin-left: -1.3rem;
+    margin-right: 0rem;
+}
+.nav-link{
+    color: $color-white !important;
+    
+}
+
+.start-trading{
+    background: $color-blue !important;
+    color: $color-white !important;
+    text-decoration: none !important;
+    border: none !important;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.text-white{
+    color: $color-white;
+}
+
+.text-blue{
+    color: $color-blue;
+}
+
+.text-black{
+    color: $color-black;
+}
