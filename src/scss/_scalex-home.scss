@@ -1,0 +1,95 @@
+.scalex-section-two{
+    padding: 4rem 0rem;
+    background: #EFEFF9;
+
+
+    &__card{
+        padding: 1rem 2rem;
+        margin: 1rem .6rem;
+        background: $color-white;
+        box-shadow: 6px 10px 30px rgba(42, 34, 129, 0.15);
+        border-radius: 10px;
+        border: none;
+
+        p{
+            color: #AFAFAF;
+            font-size: 12px;
+
+            img{
+                width: 18px;
+                width: 18px;
+            }
+        }
+
+        h4{
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+        h5{
+            font-weight: normal;
+            font-size: 16px;
+            color: $color-blue;
+        }
+    }
+}
+
+.scalex-section-three{
+    background: #F4F8FC;
+    padding: 4rem 0rem;
+
+    &--no-app{
+
+        h4{
+            font-weight: 600;
+            font-size: 40px;
+            text-transform: capitalize;
+
+            span{
+                color: $color-blue;
+                
+            }
+        }
+
+        p{
+            padding-top: 2rem;
+            margin-bottom: 0rem;
+        }
+    
+    }
+
+    &__card{
+        margin: 2rem 0rem;
+        padding: 2rem 1rem;
+        background: #FFFFFF;
+        box-shadow: 11px 11px 38px rgba(27, 89, 160, 0.05);
+        border-radius: 10px;
+        border: none;
+
+
+        h3{
+            color: #206FC9;
+            opacity: 0.2;
+            font-size: 33px;
+            font-weight: 600;
+        }
+
+        h4{
+            font-weight: 600;
+            font-size: 24px;
+            padding-top: 2rem;
+            padding-bottom: 1rem;
+           
+
+            span{
+                color: $color-blue;
+            }
+        }
+
+        p{
+            color: #66788D;
+            padding: 1rem 0rem;
+            line-height: 176%;
+        }
+    }
+}

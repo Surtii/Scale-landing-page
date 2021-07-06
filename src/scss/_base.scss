@@ -6,10 +6,12 @@ $color-blue : #206FC9;
 $color-white : #FFFFFF;
 $color-grey : #66788D;
 $color-black: #000000;
+$color-red: #FE8D8D;
+$color-green: #20C945;
 
 
 // Font 
-$font-large: 45px;
+$font-large: 40px;
 $font-medium: 24px;
 $font-small: 14px;
 
@@ -68,14 +70,31 @@ body {
     font-weight: 600;
 }
 
+.start-trading-white{
+    background: $color-white !important;
+    color: $color-blue !important;
+    text-decoration: none !important;
+    border: none !important;
+    font-style: normal;
+    font-weight: 600;
+}
+
 .text-white{
-    color: $color-white;
+    color: $color-white !important;
 }
 
 .text-blue{
-    color: $color-blue;
+    color: $color-blue !important;
 }
 
 .text-black{
-    color: $color-black;
+    color: $color-black !important;
+}
+
+.text-red{
+    color: $color-red !important;
+}
+
+.text-green{
+    color: $color-green !important;
 }

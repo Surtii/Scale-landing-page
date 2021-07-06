@@ -1,0 +1,75 @@
+.scalex-footer{
+    background: #F7F7F7;
+    padding: 1rem 0rem;
+
+
+    p{
+        margin-bottom: 0rem;
+        font-size: 18px;
+
+        @media screen and (max-width: $bp-small) and (min-width: 10em){
+            float: none;
+            font-size: 14px;
+        }
+    }
+
+
+    &--socials{
+        img{
+            width: 25px;
+            height: 25px;
+        }
+    }
+}
+
+.scalex-action{
+
+
+    &__wrapper{
+        border-radius: 30px;
+        background: $color-blue;
+        padding: 4rem ;
+        margin: 3.5rem 0rem;
+
+        
+
+
+
+        &--right{
+            
+
+            h5{
+                font-size:  $font-large;
+                color: $color-white;
+
+                @media screen and (max-width: $bp-small) and (min-width: 10em){
+                    font-size:  $font-medium;
+                    text-align: center;
+                }
+            }
+
+        }
+
+        &--left{
+            padding-top: 2rem;
+
+            @media screen and (max-width: $bp-small) and (min-width: 10em){
+                
+                padding-left: 2rem;
+            }
+
+            a{
+               float: right;
+             
+
+                @media screen and (max-width: $bp-small) and (min-width: 10em){
+                    float: none;
+                    text-align: center;
+                }
+            }
+        }
+
+        
+
+    }
+}
