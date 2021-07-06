@@ -11,6 +11,7 @@ import ArrowUpWhite from '../../images/New/arrow-up-white.svg'
 import Bitcoin from '../../images/New/bitcoin.svg'
 import Ethereum from '../../images/New/ethereum.svg'
 import Doge from '../../images/doge-logo.png'
+import Usdt from '../../images/New/usdt.svg'
 
 const NavbarNew = () => {
 
@@ -118,7 +119,7 @@ const NavbarNew = () => {
                                         <Card className="scalex-hero__hero-main__right__wrapper__third-card--right-card">
                                             <div className="d-flex align-items-center">
                                                 <span className="scalex-hero__hero-main__right__wrapper__third-card--coin-image">
-                                                    <img src={NGNT} alt="coin" />
+                                                    <img src={Usdt} alt="coin" />
                                                 </span>
                                                 <div className="scalex-hero__hero-main__right__wrapper__third-card__values">
                                                    <div className="d-flex flex-column">
