@@ -16,7 +16,7 @@ import Verification from "./pages/Verification";
 import Transactions from "./pages/Transactions";
 import Orders from "./pages/Orders";
 import Converter from "./pages/Converter";
-import Order from "./components/New/Order";
+import Order from "./pages/New/Order";
 
 function App() {
   return (
@@ -26,8 +26,8 @@ function App() {
         <Route exact path="/old-home" component={Home} />
         <Route exact path="/verification/tier-2/:id" component={Verification}/>
         <Route exact path="/transactions/:id" component={Transactions}/>
-        <Route exact path="/orders" component={Orders}/>
-        <Route exact path="/old-orders" component={Order}/>
+        <Route exact path="/old-orders" component={Orders}/>
+        <Route exact path="/orders" component={Order}/>
         <Route exact path="/converter" component={Converter}/>
       </Switch>
     </Router>

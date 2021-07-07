@@ -25,9 +25,9 @@ const NavbarNew = () => {
 
                     <Nav className="ml-auto" navbar>
                         <NavItem>
-                            <a href="https://t.me/scalexp2pbot" className="nav-link">
+                            <Link to="/orders" className="nav-link">
                                 <Button color="link" className="start-trading">Start Trading</Button>
-                            </a>
+                            </Link>
                         </NavItem>
                     </Nav>
    
@@ -42,9 +42,9 @@ const NavbarNew = () => {
                                 <h3 className="scalex-hero__hero-main__left--heading">Messenger</h3>
                                 <h6 className="scalex-hero__hero-main__left--sub-heading">Chatbot for P2P cryptocurrency exchange</h6>
                                 <p className="scalex-hero__hero-main__left--paragraph">ScaleX ensures you can securely and seamlessly buy and sell cryptocurrencies from anyone, anytime, anywhere. </p>
-                                <a href="https://t.me/scalexp2pbot" >
+                                <Link to="/orders" >
                                     <Button color="link" className="start-trading">Start Trading</Button>
-                                </a>
+                                </Link>
                             </div> 
                         </Col>
                         <Col md={6}>

@@ -1,0 +1,41 @@
+.scalex-order{
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    background: #FAFCFF;
+
+    &--text{
+        font-weight: 600;
+        font-size: 24px;
+    }
+
+    .nav-link{
+        color: #000000 !important;
+        opacity: 0.5;
+        border: none;
+
+        &:hover{
+            border-color: transparent;
+           
+        }
+
+    }
+
+    .nav-tabs{
+        border-bottom: none;
+    }
+
+    .active{
+        color: $color-white !important;
+        font-weight: 600 !important;
+        background: $color-blue !important;
+        opacity: 2;
+        border-radius: 10px;
+    }
+
+    &--tab{
+        background: #FFFFFF;
+        box-shadow: 6px 10px 30px rgba(42, 34, 129, 0.15);
+        border-radius: 10px;
+        padding: .3rem;
+    }
+}
