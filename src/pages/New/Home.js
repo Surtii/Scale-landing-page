@@ -75,10 +75,12 @@ const Home = () => {
                 <Container>
                     <Row className="scalex-section-three--no-app">
                         <Col md={6}>
-                            <h4 >You need not<br/> Download <span>another App</span></h4>
+                            <h4 >An interactive <span>Chatbot</span> <br/>to support your Trading</h4>
                         </Col>
                         <Col md={6}>
-                            <p>ScaleX Chatbot is a fast-rising P2P solution offering easy and secure crypto exchange at your fingertips. (accessible on your telegram)</p>
+                            <a href="https://t.me/scalexp2pbot" >
+                                <Button color="link" className="start-trading">Start Trading</Button>
+                            </a>
                         </Col>
                     </Row>
                     <Row>
@@ -88,10 +90,9 @@ const Home = () => {
                                     <h3>01</h3>
                                     <h4><span>Security First,</span><br/> Always.</h4>
                                     <p>
-                                        ScaleX’s primary goal is to ensure transactions are done 
-                                        with ease in a secure environment protected by an Escrow. 
-                                        This was further enhanced by building our infrastructure on 
-                                        the blockchain.
+                                        The primary goal of Scalex is to ensure transactions
+                                        are done with ease in a secure environment protected 
+                                        by a smart escrow infrastructure.
                                     </p>
                                 </div>
                             </Card>
@@ -102,9 +103,9 @@ const Home = () => {
                                     <h3>02</h3>
                                     <h4><span>Trust</span> is a Strong<br/> Commodity.</h4>
                                     <p>
-                                        To use ScaleX means you do not have to be familiar with strangers
-                                        before earning their trust. Trust is what ScaleX is built upon, ensuring 
-                                        peace of mind as you focus on scaling your crypto business
+                                        With Scalex, you do not have to be familiar with strangers 
+                                        before earning their trust. Trust is what Scalex is built upon, 
+                                        ensuring peace of mind as you focus on scaling your crypto business
                                     </p>
                                 </div>
                             </Card>
@@ -113,11 +114,11 @@ const Home = () => {
                             <Card className="scalex-section-three__card">
                                 <div className="d-flex flex-column">
                                     <h3>03</h3>
-                                    <h4><span>Speed</span> is Important<br/> to scale.</h4>
+                                    <h4><span>Flexibility</span> is Important<br/> to scale.</h4>
                                     <p>
-                                        ScaleX is dedicated to helping you scale as a crypto exchanger; 
-                                        this is why we have built a system that speeds up transaction processes 
-                                        through our seamless and interactive bot interface.
+                                        Scalex is dedicated to helping you buy and sell with ease, 
+                                        our unique infrastructure supports tokens across major networks; 
+                                        ERC-20, TRON, BSC, OMNI, DOGE, and LTC
                                     </p>
                                 </div>
                             </Card>
@@ -130,11 +131,10 @@ const Home = () => {
                     <Row>
                         <Col md={6}>
                             <div className="scalex-section-four__left">
-                                <h2>Telegram Escrow Bot for Faster Transactions.</h2>
+                                <h2>Earn as much as 15% commission by referring your friends</h2>
                                 <p className="py-2">
-                                    Telegram is fast becoming a go-to marketplace for cryptocurrency exchanges.
-                                    As such, ScaleX Chatbot is modelled around your day-to-day conversations during 
-                                    a P2P crypto transaction on Telegram and other messenger platforms.
+                                    With Scalex you can earn BTC, ETH, BNB and much more every time someone 
+                                    you referred concludes a crypto purchase
                                  </p>
                             </div>
                         </Col>
@@ -182,16 +182,16 @@ const Home = () => {
                     <Row>
                         <Col>
                             <div className="scalex-section-five__wrapper">
-                                <h3>Fastest Rising Crypto Escrow Bot</h3>
-                                <p className="scalex-section-five__wrapper--paragraph">ScaleX is the first of its kind. A P2P chatbot that helps bring balance to the imbalances in the cryptocurrency P2P ecosystem</p>
+                                <h3>A P2P platform for the Global Market</h3>
+                                <p className="scalex-section-five__wrapper--paragraph">Scalex is the first of its kind. A peer-to-peer platform built to bring balance to the imbalances in the crypto ecosystem</p>
                                 <div className="scalex-section-five__wrapper__card">
                                     <div className="d-flex justify-content-center align-items-center">
                                         <Card>
-                                            <h5 className="text-blue">8K</h5>
+                                            <h5 className="text-blue">350K</h5>
                                             <p>Transactions</p>
                                         </Card>
                                         <Card>
-                                            <h5 className="text-green">350</h5>
+                                            <h5 className="text-green">57K</h5>
                                             <p className="mx-4">Users    </p>
                                         </Card>
                                         <Card>
@@ -213,11 +213,11 @@ const Home = () => {
                     <Row>
                         <Col md={6}>
                             <div className="scalex-section-six__left">
-                                <h3>Invest in the best coins ever</h3>
+                                <h3>Trade trending tokens & stablecoins coins</h3>
                                 <p>
-                                    Telegram is fast becoming a go-to marketplace for cryptocurrency 
-                                    exchanges. As such, ScaleX Chatbot is modelled around your day-to-day
-                                    conversations during a P2P crypto transaction on Telegram and other messenger platforms.
+                                    Scalex enables our users to trade in globally recognized
+                                    tokens and stablecoins such as Bitcoin, Ethereum, Litecoin, 
+                                    Dogecoin, USDT, BUSD and USDC.
                                 </p>
                                 <a href="https://t.me/scalexp2pbot" >
                                     <Button color="link" className="start-trading">Start Trading</Button>

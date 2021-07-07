@@ -39,9 +39,9 @@ const NavbarNew = () => {
                     <Row>
                         <Col md={6}>
                             <div className="scalex-hero__hero-main__left ">
-                                <h3 className="scalex-hero__hero-main__left--heading">Messenger</h3>
-                                <h6 className="scalex-hero__hero-main__left--sub-heading">Chatbot for P2P cryptocurrency exchange</h6>
-                                <p className="scalex-hero__hero-main__left--paragraph">ScaleX ensures you can securely and seamlessly buy and sell cryptocurrencies from anyone, anytime, anywhere. </p>
+                            
+                                <h6 className="scalex-hero__hero-main__left--sub-heading pt-5">Most <span className="text-blue">Secure</span> way to trade Crypto</h6>
+                                <p className="scalex-hero__hero-main__left--paragraph">Scalex ensures you can securely and seamlessly buy and sell cryptocurrencies from anyone, anytime, anywhere in the Globe</p>
                                 <Link to="/orders" >
                                     <Button color="link" className="start-trading">Start Trading</Button>
                                 </Link>
