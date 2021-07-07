@@ -204,3 +204,173 @@
         }
     }
 }
+
+.scalex-section-five{
+    background: $color-blue;
+    padding: 7rem 0rem;
+
+    &__wrapper{
+
+        h3{
+            font-weight: 600;
+            font-size: $font-large;
+            color: $color-white;
+            padding: 0rem 23rem;
+            text-align: center;
+
+            @media screen and (max-width: $bp-bit-large) and (min-width: $bp-medium){
+                padding: 0rem 17rem;
+            }
+
+            @media screen and (max-width: $bp-medium) and (min-width: $bp-small){
+                padding: 0rem 9rem;
+            }
+
+            @media screen and (max-width: $bp-small) and (min-width: 10em){
+                padding: 0rem;
+            }
+
+           
+        }
+
+        &--paragraph{
+            color: $color-white;
+            text-align: center;
+            padding: 1rem 18rem;
+
+            @media screen and (max-width: $bp-bit-large) and (min-width: $bp-medium){
+                padding: 1rem 12rem;
+            }
+
+            @media screen and (max-width: $bp-medium) and (min-width: $bp-small){
+                padding: 1rem 4rem;
+            }
+
+            @media screen and (max-width: $bp-small) and (min-width: 10em){
+                padding: 1rem 0rem;
+            }
+        }
+
+        &__card{
+
+            .d-flex{
+
+                @media screen and (max-width: $bp-small) and (min-width: 10em){
+                    flex-direction: column;
+                }
+               
+            }
+
+            .card{
+                border-radius: 10px;
+                border: none;
+                padding: 2rem;
+                background: $color-white;
+                padding: 1rem 5rem;
+                margin: 1rem;
+
+                @media screen and (max-width: $bp-medium) and (min-width: $bp-small){
+                    padding: 1rem;
+                }
+            }
+
+            h5{
+                text-align: center;
+                font-weight: 600;
+                font-size: 30px;
+            }
+
+            p{
+                text-align: center;
+                font-weight: bold;
+
+            }
+        }
+
+        &--image{
+
+            padding-top: 3rem;
+            
+            img{
+                display: block;
+                margin: 0 auto;
+                width: 65%;
+                height: auto;
+
+                @media screen and (max-width: $bp-small) and (min-width: 10em){
+                    width: 100%;
+                }
+            }
+
+        }
+    }
+}
+
+.scalex-section-six{
+    padding: 5rem 0rem;
+
+
+    &__left{
+        padding: 5rem 3rem 4rem 3rem;
+
+        @media screen and (max-width: $bp-bit-large) and (min-width: $bp-medium){
+            padding: 4rem 0rem;
+        }
+
+        @media screen and (max-width: $bp-medium) and (min-width: $bp-small){
+            padding: 0rem;
+        }
+
+        @media screen and (max-width: $bp-small) and (min-width: 10em){
+            padding: 2rem 1rem;
+        }
+
+        h3{
+            font-weight: 600;
+            font-size: $font-large;
+            padding-right: 9rem;
+
+            @media screen and (max-width: $bp-bit-large) and (min-width: $bp-medium){
+                padding-right: 8rem;
+            }
+    
+            @media screen and (max-width: $bp-medium) and (min-width: $bp-small){
+                padding-right: 0rem;
+            }
+
+            @media screen and (max-width: $bp-small) and (min-width: 10em){
+                padding-right: 0rem;
+            }
+        }
+
+        p{
+            padding-right: 4rem;
+            margin-top: 1rem;
+            margin-bottom: 1.5rem;
+            
+            @media screen and (max-width: $bp-bit-large) and (min-width: $bp-medium){
+                padding-right: 0rem;
+            }
+    
+            @media screen and (max-width: $bp-medium) and (min-width: $bp-small){
+                padding-right: 0rem;
+            }
+
+            @media screen and (max-width: $bp-small) and (min-width: 10em){
+                padding-right: 0rem;
+            }
+        }
+    }
+
+    &__right{
+
+        img{
+            display: block;
+            margin: 0 auto;
+            width: 90%;
+            height: auto;
+
+           
+        }
+    }
+}

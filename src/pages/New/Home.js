@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Row, Col, Card} from 'reactstrap'
+import { Container, Row, Col, Card, Button} from 'reactstrap'
 
 import Hero from '../../components/New/Hero'
 import Layout from '../../components/New/Layout'
@@ -12,6 +12,8 @@ import Withdraw from '../../images/New/withdraw.svg'
 import ArrowGreen from '../../images/New/arrow-green.svg'
 import ArrowRed from '../../images/New/arrow-red.svg'
 import Charge from '../../images/New/charge.svg'
+import World from '../../images/New/world.svg'
+import Coins from '../../images/New/coins.svg'
 
 
 const Home = () => {
@@ -170,6 +172,61 @@ const Home = () => {
                                         </span>
                                     </div>
                                 </Card>
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
+            </section>
+            <section className="scalex-section-five">
+                <Container>
+                    <Row>
+                        <Col>
+                            <div className="scalex-section-five__wrapper">
+                                <h3>Fastest Rising Crypto Escrow Bot</h3>
+                                <p className="scalex-section-five__wrapper--paragraph">ScaleX is the first of its kind. A P2P chatbot that helps bring balance to the imbalances in the cryptocurrency P2P ecosystem</p>
+                                <div className="scalex-section-five__wrapper__card">
+                                    <div className="d-flex justify-content-center align-items-center">
+                                        <Card>
+                                            <h5 className="text-blue">8K</h5>
+                                            <p>Transactions</p>
+                                        </Card>
+                                        <Card>
+                                            <h5 className="text-green">350</h5>
+                                            <p className="mx-4">Users    </p>
+                                        </Card>
+                                        <Card>
+                                            <h5 className="text-red-2">11</h5>
+                                            <p className="mx-4">Coins   </p>
+                                        </Card>
+                                    </div>
+                                </div>
+                                <div className="scalex-section-five__wrapper--image">
+                                    <img src={World} alt="World" />
+                                </div>
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
+            </section>
+            <section className="scalex-section-six">
+                <Container>
+                    <Row>
+                        <Col md={6}>
+                            <div className="scalex-section-six__left">
+                                <h3>Invest in the best coins ever</h3>
+                                <p>
+                                    Telegram is fast becoming a go-to marketplace for cryptocurrency 
+                                    exchanges. As such, ScaleX Chatbot is modelled around your day-to-day
+                                    conversations during a P2P crypto transaction on Telegram and other messenger platforms.
+                                </p>
+                                <a href="https://t.me/scalexp2pbot" >
+                                    <Button color="link" className="start-trading">Start Trading</Button>
+                                </a>
+                            </div>
+                        </Col>
+                        <Col md={6}>
+                            <div className="scalex-section-six__right">
+                            <img src={Coins} alt="Coins" />
                             </div>
                         </Col>
                     </Row>

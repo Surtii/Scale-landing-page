@@ -7,6 +7,7 @@ $color-white : #FFFFFF;
 $color-grey : #66788D;
 $color-black: #000000;
 $color-red: #FE8D8D;
+$color-red-2 :#CE1112;
 $color-green: #20C945;
 
 
@@ -93,6 +94,10 @@ body {
 
 .text-red{
     color: $color-red !important;
+}
+
+.text-red-2{
+    color: $color-red-2 !important;
 }
 
 .text-green{
