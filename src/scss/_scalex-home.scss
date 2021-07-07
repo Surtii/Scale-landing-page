@@ -93,3 +93,113 @@
         }
     }
 }
+
+
+.scalex-section-four{
+    margin: 2rem 0rem;
+    padding: 3rem 1rem;
+
+    &__left{
+        padding: 5rem 3rem;
+
+        @media screen and (max-width: $bp-medium) and (min-width: $bp-small){
+            padding: 3rem 0rem;
+        }
+
+        @media screen and (max-width: $bp-small) and (min-width: 10em){
+            padding: 5rem 0rem;
+        }
+
+        h2{
+            font-style: normal;
+            font-weight: 600;
+            font-size: 36px;
+
+            @media screen and (max-width: $bp-small) and (min-width: 10em){
+                font-size: 29px;
+            }
+        }
+
+        
+    }
+
+    &__right{
+
+        &--charge-image{
+            display: block;
+            margin: 0 auto;
+            width: 350px;
+            height: 350px;
+        }
+
+        &__card{
+            position: absolute;
+            top: 58%;
+            padding: .7rem;
+            background: #FFFFFF;
+            box-shadow: 12px 4px 48px rgba(27, 89, 160, 0.17);
+            border-radius: 10px;
+            border: none;
+
+            @media screen and (max-width: $bp-medium) and (min-width: $bp-small){
+                left: 25%;
+            }
+
+            @media screen and (max-width: $bp-small) and (min-width: $bp-x-small){
+                left: 15%;
+                top: 65%;
+            }
+
+            @media screen and (max-width: $bp-x-small) and (min-width: 10em){
+                left: 20%;
+                top: 65%;
+            }
+
+            
+
+            span{
+                padding: 1rem 2.3rem;
+
+                @media screen and (max-width: $bp-medium) and (min-width: $bp-small){
+                    padding: 1rem 1.3rem;
+                }
+            }
+
+            p{
+                color: #878282;
+                font-size: 10px;
+                margin-bottom: 0rem;
+                padding-top: .4rem;
+                text-align: center;
+            }
+
+            &--one{
+                border-right: 0.5px solid rgba(0, 108, 186, 0.1);
+            }
+            &--two{
+                border-bottom: 0.5px solid rgba(0, 108, 186, 0.1);
+            }
+            &--three{
+                border-top: 0.5px solid rgba(0, 108, 186, 0.1);
+            }
+            &--four{
+                border-left: 0.5px solid rgba(0, 108, 186, 0.1);
+            }
+
+            &__image-wrapper{
+                padding: 13px;
+                background: #FFFFFF;
+                box-shadow: 4.43892px 1.47964px 17.7557px rgba(27, 89, 160, 0.17);
+                border-radius: 50%;
+
+                &--image{
+                    display: block;
+                    margin: 0 auto;
+                    width: 22px;
+                    height: 22px;
+                }
+            }
+
+        }
+    }
+}

@@ -5,8 +5,14 @@ import Hero from '../../components/New/Hero'
 import Layout from '../../components/New/Layout'
 
 import Ethereum from '../../images/New/ethereum.svg'
+import Bitcoin from '../../images/New/bitcoin.svg'
+import Sell from '../../images/New/sell.svg'
+import Wallet from '../../images/New/wallet.svg'
+import Withdraw from '../../images/New/withdraw.svg'
 import ArrowGreen from '../../images/New/arrow-green.svg'
 import ArrowRed from '../../images/New/arrow-red.svg'
+import Charge from '../../images/New/charge.svg'
+
 
 const Home = () => {
     return (
@@ -113,6 +119,58 @@ const Home = () => {
                                     </p>
                                 </div>
                             </Card>
+                        </Col>
+                    </Row>
+                </Container>
+            </section>
+            <section className="scalex-section-four">
+                <Container>
+                    <Row>
+                        <Col md={6}>
+                            <div className="scalex-section-four__left">
+                                <h2>Telegram Escrow Bot for Faster Transactions.</h2>
+                                <p className="py-2">
+                                    Telegram is fast becoming a go-to marketplace for cryptocurrency exchanges.
+                                    As such, ScaleX Chatbot is modelled around your day-to-day conversations during 
+                                    a P2P crypto transaction on Telegram and other messenger platforms.
+                                 </p>
+                            </div>
+                        </Col>
+                        <Col md={6}>
+                            <div className="scalex-section-four__right">
+                                <img src={Charge} alt="charge" className="scalex-section-four__right--charge-image" /> 
+
+                                <Card className="scalex-section-four__right__card">
+                                    <div className="d-flex align-items-center">
+                                        <span className="scalex-section-four__right__card--one" >
+                                            <div className="scalex-section-four__right__card__image-wrapper">
+                                                <img src={Bitcoin} alt="charge" className="scalex-section-four__right__card__image-wrapper--image" /> 
+                                            </div>
+                                            <p>Buy Coin</p>
+                                        </span>
+                                        <span className="scalex-section-four__right__card--two">
+                                            <div className="scalex-section-four__right__card__image-wrapper">
+                                                <img src={Sell} alt="charge" className="scalex-section-four__right__card__image-wrapper--image" /> 
+                                            </div>
+                                            <p>Sell Coin</p>
+                                        </span>
+                                    </div>
+                                    <div className="d-flex align-items-center">
+                                        <span className="scalex-section-four__right__card--three">
+                                            <div className="scalex-section-four__right__card__image-wrapper">
+                                                <img src={Withdraw} alt="charge" className="scalex-section-four__right__card__image-wrapper--image" /> 
+                                            </div>
+                                            <p>Withdraw</p>
+                                        </span>
+                                        <span className="scalex-section-four__right__card--four">
+                                            <div className="scalex-section-four__right__card__image-wrapper">
+                                                <img src={Wallet} alt="charge" className="scalex-section-four__right__card__image-wrapper--image" /> 
+                                            </div>
+                                            <p>Wallet</p>
+                                        </span>
+                                    </div>
+                                </Card>
+                            </div>
                         </Col>
                     </Row>
                 </Container>
