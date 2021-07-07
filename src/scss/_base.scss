@@ -56,6 +56,10 @@ body {
 .navbar-brand{
     margin-left: -1.3rem;
     margin-right: 0rem;
+
+    @media screen and (max-width: $bp-smallest) and (min-width: 10em){
+        margin-left: -2.3rem;
+    }
 }
 .nav-link{
     color: $color-white !important;

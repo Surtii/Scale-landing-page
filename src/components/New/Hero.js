@@ -59,12 +59,12 @@ const NavbarNew = () => {
                                                 </span>
                                                 <div className="scalex-hero__hero-main__right__wrapper__first-card__values">
                                                    <div className="d-flex flex-column">
-                                                    <p className="scalex-hero__hero-main__right__wrapper__first-card__values--naira">₦ 162, 207.14</p>
-                                                    <p className="scalex-hero__hero-main__right__wrapper__first-card__values--dollar">$ 400</p>
+                                                    <p className="scalex-hero__hero-main__right__wrapper__first-card__values--naira">₦ 1</p>
+                                                    <p className="scalex-hero__hero-main__right__wrapper__first-card__values--dollar">$ 0.0024</p>
                                                    </div>
                                                 </div>
                                                 <span className="scalex-hero__hero-main__right__wrapper__first-card__values--flow">
-                                                    <img src={ArrowUp} alt="coin" className="scalex-hero__hero-main__right__wrapper--flow-image" /> 2.3%
+                                                    <img src={ArrowUp} alt="coin" className="scalex-hero__hero-main__right__wrapper--flow-image" /> 0.002%
                                                 </span>
                                             </div>
                                         </Card>
@@ -123,8 +123,8 @@ const NavbarNew = () => {
                                                 </span>
                                                 <div className="scalex-hero__hero-main__right__wrapper__third-card__values">
                                                    <div className="d-flex flex-column">
-                                                    <p className="scalex-hero__hero-main__right__wrapper__third-card__values--naira">₦ 234, 207.14</p>
-                                                    <p className="scalex-hero__hero-main__right__wrapper__third-card__values--dollar">$ 400</p>
+                                                    <p className="scalex-hero__hero-main__right__wrapper__third-card__values--naira">₦ 500</p>
+                                                    <p className="scalex-hero__hero-main__right__wrapper__third-card__values--dollar">$ 1</p>
                                                    </div>
                                                 </div>
                                                 <span className="scalex-hero__hero-main__right__wrapper__third-card__values--flow">
