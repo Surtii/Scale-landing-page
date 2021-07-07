@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 import { Container, Navbar, Nav, NavItem, Button, Row, Col, Card, } from 'reactstrap';
 
 import Logo from '../../images/scale-logo-2-150x50.png'
-import Phone from '../../images/New/scalex-phone.svg'
+import Phone from '../../images/New/phone-image.svg'
 import NGNT from '../../images/New/ngnt.svg'
 import ArrowUp from '../../images/New/arrow-up.svg'
 import ArrowUpWhite from '../../images/New/arrow-up-white.svg'

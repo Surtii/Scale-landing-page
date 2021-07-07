@@ -69,6 +69,10 @@ body {
     border: none !important;
     font-style: normal;
     font-weight: 600;
+
+    @media screen and (max-width: $bp-x-small) and (min-width: $bp-xx-small){
+        font-size: 10px;
+    }
 }
 
 .start-trading-white{
@@ -78,6 +82,10 @@ body {
     border: none !important;
     font-style: normal;
     font-weight: 600;
+
+    @media screen and (max-width: $bp-x-small) and (min-width: $bp-xx-small){
+        font-size: 10px;
+    }
 }
 
 .text-white{

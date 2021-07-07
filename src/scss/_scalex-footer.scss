@@ -28,10 +28,13 @@
     &__wrapper{
         border-radius: 30px;
         background: $color-blue;
-        padding: 4rem ;
+        padding: 4rem 0rem;
         margin: 3.5rem 0rem;
 
         
+        @media screen and (max-width: $bp-x-small) and (min-width: 10em){
+            padding: 2rem ;
+        }
 
 
 
@@ -41,9 +44,15 @@
             h5{
                 font-size:  $font-large;
                 color: $color-white;
+                padding-left: 4rem;
+
+                @media screen and (max-width: $bp-bit-large) and (min-width: $bp-small){
+                    padding-left: 1rem;
+                }
 
                 @media screen and (max-width: $bp-small) and (min-width: 10em){
                     font-size:  $font-medium;
+                    padding-left: 0rem;
                     text-align: center;
                 }
             }
@@ -52,18 +61,15 @@
 
         &--left{
             padding-top: 2rem;
+            text-align: center;
 
-            @media screen and (max-width: $bp-small) and (min-width: 10em){
-                
-                padding-left: 2rem;
-            }
 
             a{
-               float: right;
+                display: block;
+                margin: 0 auto;
              
 
                 @media screen and (max-width: $bp-small) and (min-width: 10em){
-                    float: none;
                     text-align: center;
                 }
             }
