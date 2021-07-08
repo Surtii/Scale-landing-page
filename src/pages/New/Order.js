@@ -7,6 +7,7 @@ import classnames from 'classnames';
 import Layout from '../../components/New/Layout'
 import NavbarComponent from '../../components/New/NavbarComponent';
 import SellOrder from '../../components/New/SellOrder';
+import BuyOrder from '../../components/New/BuyOrder';
 
 const Order = () => {
 
@@ -54,7 +55,7 @@ const Order = () => {
                                 <TabPane tabId="1">
                                     <Row className="order-bg">
                                         <Col sm="12">
-                                           
+                                           <BuyOrder/>
                                         </Col>
                                     </Row>
                                 </TabPane>

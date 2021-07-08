@@ -57,7 +57,7 @@ const SellOrder = () => {
     
     useEffect(() => {
         getSellOffers()
-    }, [])
+    }, [sellOffers])
   
   
   
@@ -114,7 +114,7 @@ const coinImage = (coin_type) => {
         <div className="scalex-order__scalex-sell-order">
             {
                 loading ? (
-                    <Spinner style={{ width: '3rem', height: '3rem', top: '50%', left: '47%', position: "absolute" }} />
+                    <Spinner color="primary" style={{ width: '3rem', height: '3rem', top: '50%', left: '47%', position: "absolute" }} />
                 ):(
                     <Fragment>
                         <Row>
@@ -130,7 +130,7 @@ const coinImage = (coin_type) => {
                         <Row>
                         {
                             currentPosts.map((offer, i) => (
-                                <Col lg={4} md={6} sm={12}>
+                                <Col lg={4} md={6} sm={12} key={i}>
                                     <Card>
                                         <div className="d-flex  align-items-center pb-3">
                                             {coinImage(offer.coin_type)}
@@ -142,7 +142,7 @@ const coinImage = (coin_type) => {
                                         </div>
                                         <div className="d-flex justify-content-between py-1">
                                             <h6>Price(₦): <span>{offer.rate_in_fiat.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')} </span></h6>
-                                            <h6>Min Payment: <span> ₦{offer.minimum_limit.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')} </span></h6>
+                                            <h6>Min Payment(₦): <span> {offer.minimum_limit.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')} </span></h6>
                                         </div>
                                         <a href={`https://t.me/ScaleXP2PBot?start=q_${offer.transaction_id}`} >
                                             <Button color="danger" className="btn-block ">Sell</Button>
