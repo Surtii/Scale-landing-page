@@ -24,8 +24,8 @@ const Home = () => {
     return (
         <Layout>
             <Helmet>
-                <title>ScaleX - Messenger chatbot for P2P cryptocurrency exchange</title>
-                <meta name="title" content="ScaleX - Messenger chatbot for P2P cryptocurrency exchange"/>
+                <title>Scalex - A fraud-proof P2P cryptocurrency exchange</title>
+                <meta name="title" content="Scalex - A fraud-proof P2P cryptocurrency exchange"/>
                 <meta name="description" content="ScaleX ensures you can securely and seamlessly buy and sell cryptocurrencies from anyone, anytime, anywhere."/>
             </Helmet>
             <Hero/>

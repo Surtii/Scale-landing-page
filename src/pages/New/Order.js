@@ -10,7 +10,7 @@ import SellOrder from '../../components/New/SellOrder';
 
 const Order = () => {
 
-    const [activeTab, setActiveTab] = useState('1');
+    const [activeTab, setActiveTab] = useState('1')
 
     const toggle = tab => {
       if(activeTab !== tab) setActiveTab(tab);
@@ -21,7 +21,7 @@ const Order = () => {
             <Helmet>
                 <title>Offers</title>
                 <meta name="title" content="ScaleX - Offers"/>
-                <meta name="description" content="ScaleX ensures you can securely and seamlessly buy and sell cryptocurrencies from anyone, anytime, anywhere."/>
+                <meta name="description" content="Scalex ensures you can securely and seamlessly buy and sell cryptocurrencies from anyone, anytime, anywhere."/>
             </Helmet>
             <NavbarComponent/>
 

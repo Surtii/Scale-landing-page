@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react'
 import AOS from "aos";
-import OwlCarousel from 'react-owl-carousel';
 import CountUp from 'react-countup';
 import {Link} from 'react-router-dom'
 import { Helmet } from "react-helmet";
 
-import { options,  option2, option3} from '../utils/carousel'
-import AllPrices from '../components/AllPrices'
+// import { options,  option2, option3} from '../utils/carousel'
+// import AllPrices from '../components/AllPrices'
 import Navbar from '../components/Navbar';
 
 import Mock04 from '../images/scalex-telegram-01.png'
@@ -17,12 +16,12 @@ import Security from '../images/security.svg';
 import Trust from '../images/trust.svg';
 import Speed from "../images/speed.svg";
 
-import ETH from '../images/eth-logo.png';
-import BTC from '../images/btc-logo.png';
-import USDT from '../images/usdt-logo.png';
-import NGNT from '../images/ngnt-logo.png'
-import DOGE from '../images/doge-logo.png'
-import LITECOIN from '../images/litecoin-logo.png'
+// import ETH from '../images/eth-logo.png';
+// import BTC from '../images/btc-logo.png';
+// import USDT from '../images/usdt-logo.png';
+// import NGNT from '../images/ngnt-logo.png'
+// import DOGE from '../images/doge-logo.png'
+// import LITECOIN from '../images/litecoin-logo.png'
 
 
 
@@ -68,12 +67,12 @@ const Home = () => {
                   <div className="container">
                     <div className="stock-market-price">
                       <div id="market-rate">
-                      <OwlCarousel  
+                      {/*<OwlCarousel  
                       { ...options}
                       >  
                         <AllPrices/>
                         
-                      </OwlCarousel> 
+                      </OwlCarousel> */}
                       </div>
                       
                     </div>
@@ -201,7 +200,7 @@ const Home = () => {
                   </div> 
                   <div className="progress-slider-wrapper">
                     <div className="progress-slider">
-                      <OwlCarousel {...option2}>
+                     {/* <OwlCarousel {...option2}> 
                         <div className="item">
                           <div className="inner-block">
                             <div className="icon"><i className="fa fa-file-text"></i></div>
@@ -242,7 +241,7 @@ const Home = () => {
                             <div className="num">5</div>
                           </div> 
                         </div>
-                      </OwlCarousel>
+                    </OwlCarousel> */}
                     </div> 
                   </div> 
                 </div> 
@@ -251,14 +250,14 @@ const Home = () => {
               <div className="partner-section">
                 <div className="container">
                   <div className="partner-slider">
-                    <OwlCarousel { ...option3 }>
+                   { /*<OwlCarousel { ...option3 }>
                       <div className="item"><img src={ETH} alt="Ethereum Logo"/></div>
                       <div className="item"><img src={BTC} alt="Bitcoin Logo"/></div>
                       <div className="item"><img src={USDT} alt="USDT Logo"/></div>
                       <div className="item"><img src={NGNT} alt="NGNT Logo"/></div>
                       <div className="item"><img src={DOGE} alt="DOGE Logo"/></div>
                       <div className="item"><img src={LITECOIN} alt="LITECOIN Logo"/></div>
-                    </OwlCarousel>
+                  </OwlCarousel> */}
                   </div>
                 </div>
               </div>
