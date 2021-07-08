@@ -10,7 +10,8 @@ import './scss/main.scss';
 
 import Home from "./pages/Home";
 import Home2 from './pages/New/Home';
-import Verification from "./pages/Verification";
+// import Verification from "./pages/Verification";
+import Verification2 from "./pages/New/Verification";
 import Transactions from "./pages/Transactions";
 import Orders from "./pages/Orders";
 import Converter from "./pages/Converter";
@@ -22,7 +23,8 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home2} />
         <Route exact path="/old-home" component={Home} />
-        <Route exact path="/verification/tier-2/:id" component={Verification}/>
+        <Route exact path="/verification/tier-2/:id" component={Verification2} />
+       {/* <Route exact path="/verification/tier-2/:id" component={Verification}/> */}
         <Route exact path="/transactions/:id" component={Transactions}/>
         <Route exact path="/old-orders" component={Orders}/>
         <Route exact path="/orders" component={Order}/>
