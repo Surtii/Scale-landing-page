@@ -260,6 +260,22 @@ const SellOrder = () => {
                     </Card>
     </Col>*/}
            </Row>
+           <Row>
+                <Col className="mt-3">
+                    {
+                    filterCoin.length > 0 ? (
+                        <OrderPagination
+                        postsPerPage={postsPerPage} 
+                        totalPosts={filterCoin.length} 
+                        paginate={paginate} 
+                        />
+                        
+                    ): (
+                        <p className="text-center">No trade available</p>
+                    )
+                    }
+                </Col>
+                </Row>
         </div>
     )
 }
