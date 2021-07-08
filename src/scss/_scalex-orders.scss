@@ -39,4 +39,59 @@
         border-radius: 10px;
         padding: .3rem;
     }
+
+    .card{
+        margin: 1rem 0rem;
+        padding: 2rem 1rem;
+        color: $color-grey;
+        background: #FFFFFF;
+        box-shadow: 11px 11px 38px rgba(27, 89, 160, 0.05);
+        border-radius: 10px;
+        border: none;
+    }
+
+
+    &__scalex-sell-order{
+        padding: 5rem 0rem;
+
+
+        img{
+            height: 25px;
+            width: 25px;
+            margin-right: .3rem;
+        }
+
+        svg{
+            height: 25px;
+            width: 25px;
+            margin-right: .3rem;
+        }
+
+        h3{
+            font-size: 16px;
+            margin-bottom: 0rem;
+        }
+
+        h6{
+            font-size: 14px;
+
+        }
+        span{
+            font-size: 10px;
+        }
+
+        a{
+            text-decoration: none;
+            
+        }
+
+        .btn{
+            font-weight: 600;
+            margin-top: .5rem;
+        }
+    }
+}
+
+.order-bg{
+    background: #FAFCFF !important;
 }

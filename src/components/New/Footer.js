@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import {Link} from 'react-router-dom'
 import {Container, Row, Col, Button} from 'reactstrap'
 
 import Facebook from '../../images/New/facebook.svg'
@@ -24,9 +25,9 @@ const Footer = (props) => {
 
                         <Col md={6}>
                             <div className="scalex-action__wrapper--left">
-                                <a href="https://t.me/scalexp2pbot">
-                                    <Button color="link" className="start-trading-white py-2 btn-lg">Chat Now</Button>
-                                </a>
+                                <Link to="/orders">
+                                    <Button color="link" className="start-trading-white py-2 btn-lg">Start Trading</Button>
+                                </Link>
                             </div>
                         </Col>
                     </Row>
@@ -38,7 +39,7 @@ const Footer = (props) => {
                     <Row>
                         <Col>
                             <div className="d-flex justify-content-between align-items-center">
-                                <p>© 2021 ScaleX All Right Reserved</p>
+                                <p>© 2021 Scalex All Right Reserved</p>
 
                                 <div className="scalex-footer--socials">
                                     <a href="https://www.instagram.com/scalexp2p/"><img src={Instagram} alt="Instagram"/></a>

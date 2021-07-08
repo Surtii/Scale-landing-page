@@ -6,6 +6,7 @@ import classnames from 'classnames';
 
 import Layout from '../../components/New/Layout'
 import NavbarComponent from '../../components/New/NavbarComponent';
+import SellOrder from '../../components/New/SellOrder';
 
 const Order = () => {
 
@@ -51,16 +52,16 @@ const Order = () => {
                             </Nav>
                             <TabContent activeTab={activeTab} >
                                 <TabPane tabId="1">
-                                    <Row>
+                                    <Row className="order-bg">
                                         <Col sm="12">
-                                            
+                                           
                                         </Col>
                                     </Row>
                                 </TabPane>
                                 <TabPane tabId="2">
-                                <Row>
+                                <Row className="order-bg">
                                     <Col sm="12">
-                                        
+                                        <SellOrder/>
                                     </Col>
                                 </Row>
                                 </TabPane>
