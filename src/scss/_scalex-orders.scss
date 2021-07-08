@@ -45,7 +45,7 @@
         padding: 2rem 1rem;
         color: $color-grey;
         background: #FFFFFF;
-        box-shadow: 11px 11px 38px rgba(27, 89, 160, 0.05);
+        box-shadow: 11px 11px 38px rgba(27, 89, 160, 0.09);
         border-radius: 10px;
         border: none;
     }
@@ -94,4 +94,22 @@
 
 .order-bg{
     background: #FAFCFF !important;
+}
+
+
+.no-data{
+    font-size: $font-medium;
+}
+
+.pagination{
+    justify-content: center;
+}
+
+.search{
+    border: 1px solid $color-blue;
+
+    &:focus{
+        box-shadow: none !important;
+        border: 1px solid $color-blue;
+    }
 }
