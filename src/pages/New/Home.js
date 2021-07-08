@@ -73,14 +73,16 @@ const Home = () => {
             </section>
             <section className="scalex-section-three">
                 <Container>
-                    <Row className="scalex-section-three--no-app">
+                    <Row className="scalex-section-three__no-app">
                         <Col md={6}>
                             <h4 >An interactive <span>Chatbot</span> <br/>to support your Trading</h4>
                         </Col>
                         <Col md={6}>
-                            <a href="https://t.me/scalexp2pbot" >
-                                <Button color="link" className="start-trading">Start Trading</Button>
-                            </a>
+                            <div className="scalex-section-three__right-button">
+                                <a href="https://t.me/scalexp2pbot" >
+                                    <Button color="link" className="start-trading">Chat Now</Button>
+                                </a>
+                            </div>
                         </Col>
                     </Row>
                     <Row>
@@ -131,7 +133,7 @@ const Home = () => {
                     <Row>
                         <Col md={6}>
                             <div className="scalex-section-four__left">
-                                <h2>Earn as much as 15% commission by referring your friends</h2>
+                                <h2>Earn as much as 10% commission by referring your friends</h2>
                                 <p className="py-2">
                                     With Scalex you can earn BTC, ETH, BNB and much more every time someone 
                                     you referred concludes a crypto purchase
@@ -213,15 +215,13 @@ const Home = () => {
                     <Row>
                         <Col md={6}>
                             <div className="scalex-section-six__left">
-                                <h3>Trade trending tokens & stablecoins coins</h3>
+                                <h3>Trade trending tokens & stablecoins</h3>
                                 <p>
                                     Scalex enables our users to trade in globally recognized
                                     tokens and stablecoins such as Bitcoin, Ethereum, Litecoin, 
                                     Dogecoin, USDT, BUSD and USDC.
                                 </p>
-                                <a href="https://t.me/scalexp2pbot" >
-                                    <Button color="link" className="start-trading">Start Trading</Button>
-                                </a>
+                                
                             </div>
                         </Col>
                         <Col md={6}>

@@ -25,12 +25,12 @@
             }
 
             &--sub-heading{
-                font-size: $font-large;
+                font-size: 43px;
                 font-weight: bold;
                 color: $color-black;
 
                 @media screen and (max-width: $bp-bit-large) and (min-width: $bp-smallest){
-                    font-size: 40px;
+                    font-size: $font-large;
                 }
 
                 @media screen and (max-width: $bp-smallest) and (min-width: $bp-xx-small){

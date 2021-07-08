@@ -38,7 +38,7 @@
     background: #F4F8FC;
     padding: 4rem 0rem;
 
-    &--no-app{
+    &__no-app{
 
         h4{
             font-weight: 600;
@@ -56,6 +56,19 @@
             margin-bottom: 0rem;
         }
     
+    }
+
+    &__right-button{
+        padding: 2rem 0rem;
+        text-align: right;
+
+        .btn{
+            font-size: $font-medium;
+        }
+
+        @media screen and (max-width: $bp-small) and (min-width: 10em){
+            text-align: left;
+        }
     }
 
     &__card{
@@ -315,8 +328,11 @@
     padding: 5rem 0rem;
 
 
+
     &__left{
         padding: 5rem 3rem 4rem 3rem;
+
+        
 
         @media screen and (max-width: $bp-bit-large) and (min-width: $bp-medium){
             padding: 4rem 0rem;
@@ -365,6 +381,8 @@
                 padding-right: 0rem;
             }
         }
+
+
     }
 
     &__right{

@@ -25,7 +25,7 @@ const Footer = (props) => {
                         <Col md={6}>
                             <div className="scalex-action__wrapper--left">
                                 <a href="https://t.me/scalexp2pbot">
-                                    <Button color="link" className="start-trading-white py-2 btn-lg">Start Trading</Button>
+                                    <Button color="link" className="start-trading-white py-2 btn-lg">Chat Now</Button>
                                 </a>
                             </div>
                         </Col>
