@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react'
+import { Col, Card } from 'reactstrap'
 import axios from 'axios'
-import { Spinner } from 'reactstrap'
+
+import ArrowGreen from '../images/New/arrow-green.svg'
+import Litecoin from '../images/litecoin.png'
 
 const LiteCoinPrice = () => {
-    const [ liteCoinPrices, setLiteCoinPrices] = useState(0)
+    const [ prices, setPrices] = useState(0)
     const [ naira, setNaira] = useState(0)
-    const [ baseCurrency, setBaseCurrency ] = useState('')
-    const [loading, setLoading] = useState(true)
 
     const fetchBTCPriceData = async () => {
         try {
@@ -15,9 +16,8 @@ const LiteCoinPrice = () => {
             usd = parseFloat(usd.replace(/,/g,''))
             usd = usd.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')
             // States
-            setLiteCoinPrices(usd)
-            setBaseCurrency(res.data.data.base)
-            setLoading(false)
+            setPrices(usd)
+          
         } catch (err) {
             console.log(err)
         }
@@ -39,29 +39,30 @@ const LiteCoinPrice = () => {
         fetchBTCPriceData()
        }, 3000);
     
-    }, [setLiteCoinPrices, setBaseCurrency, setNaira])
+    }, [setPrices, setNaira])
 
 
 
     return (
-        <div className="item">
-            <div className="main-wrapper">
-                {
-                    loading ? (
-                        <Spinner/>
-                    ): (
-                        <>
-                            <div className="amount">${''}{liteCoinPrices}</div>
-                            <h6 className="title">&#8358;{''}{naira}</h6>
-                            <div className="current-info range-up">
-                                <i className="icon flaticon-up-carret"></i>
-                                <span className="rate">{baseCurrency}</span>
-                            </div>
-                        </>
-                    )
-                }
+        <Col>
+        <Card className="scalex-section-two__card">
+            <div className="d-flex align-items-center pb-4">
+                <span><img src={Litecoin} className="scalex-section-two__card--coin-image" alt="Ethereum"/></span> 
+                <p className="mb-0 pl-1">Litecoin</p>
             </div>
-        </div>
+
+            <div className="d-flex justify-content-between align-items-center">
+                <span>
+                    <h4>$ {prices}</h4>
+                    <h5>₦ {naira}</h5>
+                </span>
+                <span>
+                    <h4><img src={ArrowGreen} alt="Ethereum" className="scalex-section-two__card--coin-arrow ml-2" /></h4>
+                    <h5 className="text-green">1.3%</h5>
+                </span>
+            </div>
+        </Card>
+    </Col>
     )
 }
 

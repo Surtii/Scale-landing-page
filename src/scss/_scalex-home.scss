@@ -4,7 +4,7 @@
 
 
     &__card{
-        padding: 1rem 2rem;
+        padding: 1rem .7rem;
         margin: 1rem .6rem;
         background: $color-white;
         box-shadow: 6px 10px 30px rgba(42, 34, 129, 0.15);
@@ -15,10 +15,17 @@
             color: #AFAFAF;
             font-size: 12px;
 
-            img{
-                width: 18px;
-                width: 18px;
-            }
+            
+        }
+
+        &--coin-image{
+            width: 18px !important;
+            width: 18px !important;
+        }
+
+        &--coin-arrow{
+            width: 12px !important;
+            width: 12px !important;
         }
 
         h4{

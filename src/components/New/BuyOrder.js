@@ -58,7 +58,7 @@ const BuyOrder = () => {
 
       useEffect(() => {
         getBuyOffers();
-    }, [buyOffers])
+    }, [])
     
 
 

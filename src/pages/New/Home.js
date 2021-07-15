@@ -1,24 +1,23 @@
 import React from 'react'
 import { Helmet } from "react-helmet";
 import { Container, Row, Col, Card, Button} from 'reactstrap'
+import OwlCarousel from 'react-owl-carousel'; 
+
+import { options} from '../../utils/carousel'
+import AllPrices from '../../components/AllPrices'
+
 
 import Hero from '../../components/New/Hero'
 import Layout from '../../components/New/Layout'
 
-import Ethereum from '../../images/New/ethereum.svg'
 import Bitcoin from '../../images/New/bitcoin.svg'
-import Doge from '../../images/doge-logo.png'
 import Sell from '../../images/New/sell.svg'
 import Wallet from '../../images/New/wallet.svg'
 import Withdraw from '../../images/New/withdraw.svg'
-import ArrowGreen from '../../images/New/arrow-green.svg'
-import ArrowRed from '../../images/New/arrow-red.svg'
 import Charge from '../../images/New/charge.svg'
 import World from '../../images/New/world.svg'
 import Coins from '../../images/New/coins.svg'
-import BtcPrice from '../../components/New/BtcPrice'
-import EthPrice from '../../components/New/EthPrice'
-import DogePrice from '../../components/New/DogePrice'
+
 
 const Home = () => {
     return (
@@ -32,43 +31,12 @@ const Home = () => {
             <section className="scalex-section-two">
                 <Container>
                     <Row>
-                        <Col md={4}>
-                            <Card className="scalex-section-two__card">
-                                <p><img src={Bitcoin} alt="Ethereum"/> Bitcoin</p>
-                                <div className="d-flex justify-content-between align-items-center">
-                                    <BtcPrice/>
-                                    <span>
-                                        <h4><img src={ArrowGreen} alt="Ethereum" className="ml-2" /></h4>
-                                        <h5 className="text-green">1.3%</h5>
-                                    </span>
-                                </div>
-                            </Card>
-                        </Col>
-                        <Col md={4}>
-                            <Card className="scalex-section-two__card">
-                                <p><img src={Ethereum} alt="Ethereum"/> Ethereum</p>
-                                <div className="d-flex justify-content-between align-items-center">
-                                    <EthPrice/>
-                                    <span>
-                                        <h4><img src={ArrowRed} alt="Arrow" className="ml-2"/></h4>
-                                        <h5 className="text-red">2.3%</h5>
-                                    </span>
-                                </div>
-                            </Card>
-                        </Col>
-                        <Col md={4}>
-                            <Card className="scalex-section-two__card">
-                                <p><img src={Doge} alt="Ethereum"/>Doge</p>
-                                <div className="d-flex justify-content-between align-items-center">
-                                    <DogePrice/>
-                                    <span>
-                                        <h4><img src={ArrowRed} alt="Arrow" className="ml-2" /></h4>
-                                        <h5 className="text-green">10.8%</h5>
-                                    </span>
-                                </div>
-                            </Card>
-                        </Col>
-                    </Row>
+                        <OwlCarousel  
+                        { ...options}
+                        >  
+                            <AllPrices/>
+                        </OwlCarousel> 
+                        </Row>
                 </Container>
             </section>
             <section className="scalex-section-three">

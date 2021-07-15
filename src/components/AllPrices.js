@@ -1,7 +1,8 @@
 import React from 'react'
-import BtcPrice from './BtcPrice'
-import DASHCoinPrice from './DASHCoinPrice'
-import ETHCoinPrice from './ETHCoinPrice'
+import BtcPrice from './New/BtcPrice'
+// import DASHCoinPrice from './New/DASHCoinPrice'
+import DogePrice from './New/DogePrice'
+import EthPrice from './New/EthPrice'
 import LiteCoinPrice from './LiteCoinPrice'
 
 
@@ -10,9 +11,9 @@ const AllPrices = () => {
     return (
         <>
             <BtcPrice/>
-            <LiteCoinPrice/>
-            <ETHCoinPrice/>
-            <DASHCoinPrice/>
+            <EthPrice/>
+            <LiteCoinPrice/> 
+            <DogePrice/>
         </>
     )
 }
