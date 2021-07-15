@@ -11,8 +11,9 @@ const OrderPagination = ({postsPerPage, totalPosts, paginate}) => {
     return (
     <Pagination aria-label="Page navigation example">
 
-        <PaginationItem disabled>
+        <PaginationItem >
             <PaginationLink previous />
+            {/* <PaginationLink previous  onClick={()=> paginate(postsPerPage - 1)}/> */}
         </PaginationItem>
         {pageNumbers.map(number => (
             <PaginationItem key={number} active>
@@ -24,6 +25,8 @@ const OrderPagination = ({postsPerPage, totalPosts, paginate}) => {
         ))}
         <PaginationItem>
             <PaginationLink next />
+
+            { /*  <PaginationLink next  onClick={()=> paginate(postsPerPage + 1)}/> */}
         </PaginationItem>
     </Pagination>
     )

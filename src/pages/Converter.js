@@ -10,6 +10,7 @@ const initialState = {
     rate: '',
 
 }
+
 const Converter = () => {
     const [formData, setFormData] = useState(initialState)
     const [price, setPrice] = useState('')
@@ -90,8 +91,8 @@ const Converter = () => {
         <Layout>
             <Helmet>
                 <title>Converter</title>
-                <meta name="title" content="ScaleX - Converter"/>
-                <meta name="description" content="ScaleX ensures you can securely and seamlessly buy and sell cryptocurrencies from anyone, anytime, anywhere."/>
+                <meta name="title" content="Scalex - Converter"/>
+                <meta name="description" content="Scalex ensures you can securely and seamlessly buy and sell cryptocurrencies from anyone, anytime, anywhere."/>
             </Helmet>
             <div className="converter">
                 <Container>
