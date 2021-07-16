@@ -7,7 +7,7 @@ import OrderPagination from '../OrderPagination'
 
 
 import NGNT from '../../images/ngnt-logo.png'
-import Bitcoin from '../../images/bitcoin.png'
+import Bitcoin from '../../images/btc-logo.png'
 import USDT from '../../images/usdt-logo.png'
 import ETH from '../../images/eth-logo.png'
 import DOGE from '../../images/doge-logo.png'

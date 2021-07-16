@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import { Container, Navbar, Nav, NavItem, Button } from 'reactstrap';
 
-import Logo from '../../images/apple-touch-icon.png'
+import Logo from '../../images/scale-logo-2-150x50.png'
 
 
 const NavbarComponent = () => {
@@ -10,9 +10,8 @@ const NavbarComponent = () => {
         <Navbar className="scalex-navbar">
             <Container>
                 <Link to="/" className="navbar-brand">
-                   <div className="d-flex align-items-center"><img src={Logo} alt="Logo" className="logo"/><span>Scalex</span></div>
+                  <img src={Logo} alt="Logo" className="logo"/>
                 </Link>
-
                 <Nav className="ml-auto" navbar>
                     <NavItem>
                         <Link to="/orders" className="nav-link">
