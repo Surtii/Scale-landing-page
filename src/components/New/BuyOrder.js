@@ -81,7 +81,7 @@ const BuyOrder = () => {
           return   "USDT (BEP20)";
         }else if(coin_type === 'BTC_BEP_20'){
            return "BTC (BEP20)";
-        }else if(coin_type === 'USDT_TRON'){
+        }else if(coin_type === 'USDT_TRC_20'){
           return  "USDT (TRC20)";
         }else {
           return coin_type
@@ -89,7 +89,7 @@ const BuyOrder = () => {
       }
 
       const coinImage = (coin_type) => {
-        if(coin_type === 'USDT_ERC_20' || coin_type === 'USDT_BEP_20' || coin_type === 'USDT_TRON'){
+        if(coin_type === 'USDT_ERC_20' || coin_type === 'USDT_BEP_20' || coin_type === 'USDT_TRC_20'){
           return <img src={USDT} alt={coin_type}/> ;
         }else if(coin_type === 'DOGE'){
             return <img src={DOGE} alt={coin_type}/>;
