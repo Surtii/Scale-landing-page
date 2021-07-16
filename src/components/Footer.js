@@ -2,10 +2,10 @@ import React, { Fragment } from 'react'
 import {Link} from 'react-router-dom'
 import {Container, Row, Col, Button} from 'reactstrap'
 
-import Facebook from '../../images/New/facebook.svg'
-import Instagram from '../../images/New/instagram.svg'
-import Twitter from '../../images/New/twitter.svg'
-import LinkedIn from '../../images/New/linkedin.svg'
+import Facebook from '../images/New/facebook.svg'
+import Instagram from '../images/New/instagram.svg'
+import Twitter from '../images/New/twitter.svg'
+import LinkedIn from '../images/New/linkedin.svg'
 
 const Footer = (props) => {
     return (

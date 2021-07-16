@@ -4,10 +4,10 @@ import { Helmet } from "react-helmet";
 import classnames from 'classnames';
 
 
-import Layout from '../../components/New/Layout'
-import NavbarComponent from '../../components/New/NavbarComponent';
-import SellOrder from '../../components/New/SellOrder';
-import BuyOrder from '../../components/New/BuyOrder';
+import Layout from '../components/Layout'
+import NavbarComponent from '../components/NavbarComponent';
+import SellOrder from '../components/SellOrder';
+import BuyOrder from '../components/BuyOrder';
 
 const Order = () => {
 

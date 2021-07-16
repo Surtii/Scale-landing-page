@@ -5,43 +5,43 @@ import { Spinner } from 'reactstrap'
 import DataTable from 'react-data-table-component';
 import { Container, Row, Col } from 'reactstrap';
 import axios from 'axios'
-import Layout from '../components/Layout'
 
+import NavbarComponent from '../../components/NavbarComponent';
+import Layout from '../../components/Layout'
 
-// const data = [{ id: 1, title: 'Conan the Barbarian', year: '1982', date: 'Conan the Barbarian', country: '1982' }];
 const columns = [
-  {
-    name: 'Seller',
-    selector: 'seller_name'
-  },
-  {
-    name: 'Buyer',
-    selector: 'buyer_name'
-  },
-  {
-    name: 'Quantity',
-    selector: 'quantity'
-  },
-  {
-    name: 'Amount',
-    selector: 'amount'
-  },
-  {
-    name: 'Token',
-    selector: 'token'
-  },
-  {
-    name: 'Status',
-    selector: 'status'
-  },
-  {
-    name: 'Date',
-    selector: 'date_created'
-  },
-
-];
-
-const Transactions = ({match}) => {
+    {
+      name: 'Seller',
+      selector: 'seller_name'
+    },
+    {
+      name: 'Buyer',
+      selector: 'buyer_name'
+    },
+    {
+      name: 'Quantity',
+      selector: 'quantity'
+    },
+    {
+      name: 'Amount',
+      selector: 'amount'
+    },
+    {
+      name: 'Token',
+      selector: 'token'
+    },
+    {
+      name: 'Status',
+      selector: 'status'
+    },
+    {
+      name: 'Date',
+      selector: 'date_created'
+    },
+  
+  ];
+  
+  const Transactions = ({match}) => {
     const [allTransactions, setAllTransactions] = useState([])
     const [loading, setLoading] = useState(true)
 
@@ -81,7 +81,8 @@ const Transactions = ({match}) => {
                 <meta name="title" content="Scalex - Transaction History"/>
                 <meta name="description" content="Scalex ensures you can securely and seamlessly buy and sell cryptocurrencies from anyone, anytime, anywhere."/>
             </Helmet>
-            <div className="transactions">
+            <NavbarComponent/>
+            <div className="scalex-transactions">
                 <Container>
                     <Row>
                         <Col>

@@ -2,31 +2,30 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Col, Card } from 'reactstrap'
 
-import ArrowGreen from '../../images/New/arrow-green.svg'
-import Bitcoin from '../../images/New/bitcoin.svg'
+import ArrowRed from '../images/New/arrow-red.svg'
+import Ethereum from '../images/New/ethereum.svg'
 
-const BtcPrice = () => {
 
-    const [ prices, setPrice] = useState(0)
-    const [ naira, setNaira] = useState(0.00)
+
+const EthPrice = () => {
+    const [ prices, setPrices] = useState(0)
+    const [ naira, setNaira] = useState(0)
 
     const fetchBTCPriceData = async () => {
         try {
-            const res = await axios.get("https://api.coinbase.com/v2/prices/btc-usd/spot")
+            const res = await axios.get("https://api.coinbase.com/v2/prices/eth-usd/spot")
             let usd = res.data.data.amount
             usd = parseFloat(usd.replace(/,/g,''))
             usd = usd.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')
             // States
-            setPrice(usd)
-
-            console.log(usd)
+            setPrices(usd)
            
         } catch (err) {
             console.log(err)
         }
 
         try {
-            const res = await axios.get("https://api.coinbase.com/v2/prices/btc-ngn/spot")
+            const res = await axios.get("https://api.coinbase.com/v2/prices/eth-ngn/spot")
             let ngn = res.data.data.amount
             ngn = parseFloat(ngn.replace(/,/g,''))
             ngn = ngn.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')
@@ -42,16 +41,19 @@ const BtcPrice = () => {
         fetchBTCPriceData()
        }, 3000);
     
-    }, [])
+    }, [setPrices, setNaira])
+
+
 
 
     return (
-        <> 
+
+        <>
             <Col>
                 <Card className="scalex-section-two__card">
                     <div className="d-flex align-items-center pb-4">
-                        <span><img src={Bitcoin} className="scalex-section-two__card--coin-image" alt="Ethereum"/></span> 
-                        <p className="mb-0 pl-1">Bitcoin</p>
+                        <span><img src={Ethereum} className="scalex-section-two__card--coin-image" alt="Ethereum"/></span> 
+                        <p className="mb-0 pl-1">Ethereum</p>
                     </div>
                     
                     <div className="d-flex justify-content-between align-items-center">
@@ -60,8 +62,8 @@ const BtcPrice = () => {
                             <h5>₦ {naira}</h5>
                         </span>
                         <span>
-                            <h4><img src={ArrowGreen} alt="Ethereum" className="scalex-section-two__card--coin-arrow ml-2" /></h4>
-                            <h5 className="text-green">1.3%</h5>
+                            <h4><img src={ArrowRed} alt="Arrow" className="scalex-section-two__card--coin-arrow ml-2" /></h4>
+                            <h5 className="text-red">2.3%</h5>
                         </span>
                     </div>
                 </Card>
@@ -70,6 +72,4 @@ const BtcPrice = () => {
     )
 }
 
-
-
-export default BtcPrice
+export default EthPrice

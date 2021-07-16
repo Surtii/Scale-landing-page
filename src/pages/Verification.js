@@ -1,12 +1,13 @@
 import React, { useState, useEffect, Fragment } from 'react'
 import { Helmet } from "react-helmet";
 import { withRouter } from 'react-router-dom';
-import { Spinner } from 'reactstrap'
+import { Container, Row, Col, Input, Button, Spinner } from 'reactstrap';
 import axios from 'axios'
 import useValidator from '../validateHook/useValidator'
 
-import Layout from '../components/Layout'
 
+import Layout from '../components/Layout'
+import NavbarComponent from '../components/NavbarComponent';
 
 const Verification = ({match}) => {
     const [bvn, setBvn] = useState('')
@@ -108,69 +109,71 @@ const Verification = ({match}) => {
     }
 
 
+
     return (
         <Layout>
             <Helmet>
                 <title>Tier 2 Verification</title>
                 <meta name="title" content="ScaleX - Tier 1 Verification"/>
-                <meta name="description" content="ScaleX ensures you can securely and seamlessly buy and sell cryptocurrencies from anyone, anytime, anywhere."/>
+                <meta name="description" content="Scalex ensures you can securely and seamlessly buy and sell cryptocurrencies from anyone, anytime, anywhere."/>
             </Helmet>
-            <div className="contact-us-one" id="contact">
-                <div className="container">
-                    <div className="my-5">
-                        <div className="verification-wrapper">
-                            <h4 className="text-center">BVN Verification</h4>
-                        
-                        </div>
-                        { loading ? (
-                            <Spinner style={{ width: '3rem', height: '3rem', top: '50%', left: '47%', position: "absolute" }} />
-                        ):(
-                            <Fragment>
-                                <p className="text-center">Hi {verifiedName}, Kindly verify your BVN to increase your transaction limit</p>
-                                <div className="row">
-                                    {
-                                        message ? (
-                                            <div className="col-md-6 offset-md-3">
-                                                <div className="alert alert-success text-center" role="alert">
-                                                    {message}
-                                                </div>
-                                            </div>
-                                        ): ('')
-                                    }
-                                </div>
-                                
-                                <form autoComplete="off" onSubmit={handleSubmit}>
-                                    <div className="row">
-                                        <div className="col-md-6 offset-md-3">
-                                            <input 
-                                                type="text" 
-                                                placeholder="Your 11 digits" 
-                                                name="bvn"
-                                                value={bvn}
-                                                onChange={handleChange}
-                                            />
-
+            <NavbarComponent/>
+            <section className="scalex-verification">
+                <Container>
+                    <Row>
+                        <Col>
+                           <div className="scalex-verification__wrapper">
+                                <h3>Verification</h3>
+                                {
+                                    loading ? (
+                                        <Spinner color="primary" style={{ width: '3rem', height: '3rem', top: '50%', left: '47%', position: "absolute" }} />
+                                    ):(
+                                        <Fragment>
+                                        <p className="text-center">Hi {verifiedName}, Kindly verify your BVN to increase your transaction limit</p>
                                             {
-                                                validator.message('bvn', bvn, 'required|min:11|max:11', {
-                                                    message: {
-                                                        required: 'Required'
-                                                    },
-                                                    className: 'text-danger'
-                                                })
+                                                message ? (
+                                                    <div className="col-md-6 offset-md-3">
+                                                        <div className="alert alert-success text-center" role="alert">
+                                                            {message}
+                                                        </div>
+                                                    </div>
+                                                ): ('')
                                             }
-                                        </div>
-                                    </div>
-                                    <button>Verify</button>
-                                </form>
-                            </Fragment>
-                        )
-                    }
-                        
-                    </div>
-                </div>
-            </div>
+                                            <div className="scalex-verification__wrapper--form">
+                                                <form autoComplete="off" onSubmit={handleSubmit}>
+                                                    <div className="row">
+                                                        <div className="col-md-6 offset-md-3 my-4">
+                                                            <Input 
+                                                                type="text" 
+                                                                placeholder="Enter your BVN number" 
+                                                                name="bvn"
+                                                                value={bvn}
+                                                                onChange={handleChange}
+                                                            />
+                                                            {
+                                                                validator.message('bvn', bvn, 'required|min:11|max:11', {
+                                                                    message: {
+                                                                        required: 'Required'
+                                                                    },
+                                                                    className: 'text-danger error-message'
+                                                                })
+                                                            }
+                                                        </div>
+            
+                                                    </div>
+                                                    <Button color="primary">Verify</Button>
+                                                </form>
+                                            </div>
+                                        </Fragment>
+                                    )
+                                }
+                           </div>
+                        </Col> 
+                    </Row>
+                </Container>
+            </section>
         </Layout>
     )
 }
 
-export default withRouter(Verification) 
+export default withRouter(Verification)

@@ -10,10 +10,10 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 
 import './scss/main.scss';
 
-import Home from './pages/New/Home';
-import Verification from "./pages/New/Verification";
-import Converter from './pages/New/Converter'
-import Order from "./pages/New/Order";
+import Home from './pages/Home';
+import Verification from "./pages/Verification";
+import Converter from './pages/Converter'
+import Order from "./pages/Order";
 
 function App() {
   return (

@@ -2,16 +2,16 @@ import React, { useState, useEffect, Fragment, useMemo } from 'react'
 import { Card, Col, Row, Button, Spinner, Input } from 'reactstrap'
 import axios from 'axios'
 
-import OrderPagination from '../OrderPagination'
+import OrderPagination from './OrderPagination'
 
-import NGNT from '../../images/ngnt-logo.png'
-import Bitcoin from '../../images/btc-logo.png'
-import USDT from '../../images/usdt-logo.png'
-import ETH from '../../images/eth-logo.png'
-import DOGE from '../../images/doge-logo.png'
-import LTC from '../../images/litecoin-logo.png'
-import BNB from '../../images/bnb.svg'
-import BUSD from '../../images/busd.png'
+import NGNT from '../images/ngnt-logo.png'
+import Bitcoin from '../images/btc-logo.png'
+import USDT from '../images/usdt-logo.png'
+import ETH from '../images/eth-logo.png'
+import DOGE from '../images/doge-logo.png'
+import LTC from '../images/litecoin-logo.png'
+import BNB from '../images/bnb.svg'
+import BUSD from '../images/busd.png'
 
 const SellOrder = () => {
 

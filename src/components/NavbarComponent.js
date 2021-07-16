@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import { Container, Navbar, Nav, NavItem, Button } from 'reactstrap';
 
-import Logo from '../../images/scale-logo-2-150x50.png'
+import Logo from '../images/scale-logo-2-150x50.png'
 
 
 const NavbarComponent = () => {
