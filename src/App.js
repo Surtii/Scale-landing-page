@@ -15,6 +15,7 @@ import Fees from "./pages/Others/Fees";
 import Verification from "./pages/Verification";
 import Converter from './pages/Converter'
 import Order from "./pages/Order";
+import PrivacyPolicy from "./pages/Others/PrivacyPolicy";
 
 
 function App() {
@@ -22,10 +23,11 @@ function App() {
     <Router>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/fees" component={Fees}  />
         <Route exact path="/orders" component={Order}/>
         <Route exact path="/converter" component={Converter}/>
         <Route exact path="/verification/tier-2/:id" component={Verification} />
+        <Route exact path="/fees" component={Fees} />
+        <Route exact path="/privacy-policy" component={PrivacyPolicy} />
       </Switch>
     </Router>
   );
