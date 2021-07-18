@@ -1,5 +1,6 @@
 .scalex-fees{
     padding: 5rem 0rem;
+    background: #FAFCFF;
 
 
     &--title{
@@ -42,11 +43,57 @@
         border-radius: 10px;
     }
 
+    
+
     &--tab{
         background: #FFFFFF;
         box-shadow: 6px 10px 30px rgba(42, 34, 129, 0.15);
         border-radius: 10px;
         padding: .3rem;
     }
+
+
+
+    &__wrapper{
+       padding: 1rem 0rem;
+       color: $color-black;
+
+       &--title{
+
+         h4{
+            font-size: 16px ;      
+            color: #000000;
+            opacity: 0.5;
+         }
+       }
+       p{
+            margin-bottom: 0rem;
+        }
+
+       &__group{
+
+        span{
+            background: #F4F4F4;
+            padding: .3rem;
+            border-radius: 50%;
+        }
+
+        p{
+            margin-bottom: 0rem;
+        }
+
+        &--image{
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+        }
+       }
+    }
+
+    .fees-bg{
+        margin-top: 3rem;
+        background: #FAFCFF;
+    }
+
 
 }
