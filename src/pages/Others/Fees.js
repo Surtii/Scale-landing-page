@@ -6,6 +6,7 @@ import { Container, Col, Row, TabContent, TabPane, Nav, NavItem, NavLink, } from
 import Layout from '../../components/Layout'
 import NavbarComponent from '../../components/NavbarComponent';
 import SendReceiveFee from '../../components/Fees/SendReceiveFee';
+import TradeFee from '../../components/Fees/TradeFee';
 
 const Fees = () => {
     const [activeTab, setActiveTab] = useState('1')
@@ -76,26 +77,26 @@ const Fees = () => {
                                 <TabPane tabId="2">
                                     <Row className="fees-bg">
                                         <Col sm="12">
-                                        <SendReceiveFee
-                                            btc="Dynamic"
-                                            btc_bep_20="Dynamic"
-                                            eth="Free"
-                                            eth_bep_20="Free"
-                                            ltc="Dynamic"
-                                            bnb="Dynamic"
-                                            busd="Free"
-                                            ngnt="Dynamic"
-                                            usdt_erc_20="Free"
-                                            usdt_bep_20="Dynamic"
-                                            usdt_trc_20="Free"
-                                        />
+                                            <SendReceiveFee
+                                                btc="Dynamic"
+                                                btc_bep_20="Dynamic"
+                                                eth="Free"
+                                                eth_bep_20="Free"
+                                                ltc="Dynamic"
+                                                bnb="Dynamic"
+                                                busd="Free"
+                                                ngnt="Dynamic"
+                                                usdt_erc_20="Free"
+                                                usdt_bep_20="Dynamic"
+                                                usdt_trc_20="Free"
+                                            />
                                         </Col>
                                     </Row>
                                 </TabPane>
                                 <TabPane tabId="3">
                                     <Row className="fees-bg">
                                         <Col sm="12">
-                                            
+                                            <TradeFee/>
                                         </Col>
                                     </Row>
                                 </TabPane>
