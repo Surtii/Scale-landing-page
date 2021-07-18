@@ -10,7 +10,6 @@ import SellOrder from '../components/SellOrder';
 import BuyOrder from '../components/BuyOrder';
 
 const Order = () => {
-
     const [activeTab, setActiveTab] = useState('1')
 
     const toggle = tab => {

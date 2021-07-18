@@ -33,13 +33,22 @@ const Footer = (props) => {
                     </Row>
                 </Container>
             </section>
+            {/*<section className="scalex-quick-links">
+                <Container>
+                    <Row>
+                        <Col md={4}></Col>
+                        <Col md={4}></Col>
+                        <Col md={4}></Col>
+                    </Row>
+                </Container>
+    </section> */}
             <section className="scalex-footer">
                 <Container>
                     
                     <Row>
                         <Col>
                             <div className="d-flex justify-content-between align-items-center">
-                                <p>© 2021 Scalex All Right Reserved</p>
+                                <p>© 2021 Scalex All Rights Reserved</p>
 
                                 <div className="scalex-footer--socials">
                                     <a href="https://www.instagram.com/scalexp2p/"><img src={Instagram} alt="Instagram"/></a>

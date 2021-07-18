@@ -11,18 +11,21 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 import './scss/main.scss';
 
 import Home from './pages/Home';
+import Fees from "./pages/Others/Fees";
 import Verification from "./pages/Verification";
 import Converter from './pages/Converter'
 import Order from "./pages/Order";
+
 
 function App() {
   return (
     <Router>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/verification/tier-2/:id" component={Verification} />
+        <Route exact path="/fees" component={Fees}  />
         <Route exact path="/orders" component={Order}/>
         <Route exact path="/converter" component={Converter}/>
+        <Route exact path="/verification/tier-2/:id" component={Verification} />
       </Switch>
     </Router>
   );
