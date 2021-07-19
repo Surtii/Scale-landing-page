@@ -9,7 +9,7 @@ const TradeFee = () => {
         <div className="scalex-fees__trade-fee">
             <div className="d-flex flex-column align-items-center">
                 <img src={Dollar} alt="Dollar" />
-                <p>We charge a flat trading fee of 0.07% across all trading pairs</p>
+                <p>We do not distinguish between takers and makers, each party is charged a flat fee of 0.5% </p>
             </div>
         </div>
 

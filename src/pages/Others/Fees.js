@@ -60,16 +60,16 @@ const Fees = () => {
                                         <Col sm="12">
                                             <SendReceiveFee
                                                 btc="Dynamic"
-                                                btc_bep_20="Dynamic"
-                                                eth="Free"
-                                                eth_bep_20="Free"
-                                                ltc="Dynamic"
-                                                bnb="Dynamic"
-                                                busd="Free"
+                                                btc_bep_20="0.00016 BTC"
+                                                eth="Dynamic"
+                                                eth_bep_20="0.0027 ETH"
+                                                ltc="0.015 LTC"
+                                                bnb="0.01 BNB"
+                                                busd="$5"
                                                 ngnt="Dynamic"
-                                                usdt_erc_20="Free"
-                                                usdt_bep_20="Dynamic"
-                                                usdt_trc_20="Free"
+                                                usdt_erc_20="Dynamic"
+                                                usdt_bep_20="$10"
+                                                usdt_trc_20="$10"
                                             />
                                         </Col>
                                     </Row>
@@ -78,16 +78,16 @@ const Fees = () => {
                                     <Row className="fees-bg">
                                         <Col sm="12">
                                             <SendReceiveFee
-                                                btc="Dynamic"
-                                                btc_bep_20="Dynamic"
+                                                btc="Free"
+                                                btc_bep_20="Free"
                                                 eth="Free"
                                                 eth_bep_20="Free"
-                                                ltc="Dynamic"
-                                                bnb="Dynamic"
+                                                ltc="Free"
+                                                bnb="Free"
                                                 busd="Free"
-                                                ngnt="Dynamic"
+                                                ngnt="Free"
                                                 usdt_erc_20="Free"
-                                                usdt_bep_20="Dynamic"
+                                                usdt_bep_20="Free"
                                                 usdt_trc_20="Free"
                                             />
                                         </Col>

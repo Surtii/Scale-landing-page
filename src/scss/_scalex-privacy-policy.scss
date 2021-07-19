@@ -1,9 +1,29 @@
 .scalex-privacy-policy{
     padding: 5rem 0rem;
 
+
+    &--title-bg{
+        background: #F3F7FB;
+    }
+
+
     &--title{
+        padding-top: 2rem;
+        padding-bottom: 4rem;
         text-align: center;
         font-weight: bold;
         font-size: $font-large;
+    }
+
+    &__wrapper{
+
+        p{
+            font-size: $font-small;
+        }
+
+        h3{
+            font-size: $font-large;
+            font-weight: 600;
+        }
     }
 }
