@@ -2,13 +2,8 @@
     padding: 5rem 0rem;
 
 
-    &--title-bg{
-        background: #F3F7FB;
-    }
-
-
     &--title{
-        padding-top: 2rem;
+        padding: 2rem;
         padding-bottom: 4rem;
         text-align: center;
         font-weight: bold;
@@ -22,6 +17,7 @@
         }
 
         h3{
+            margin-bottom: 1.5rem;
             font-size: $font-large;
             font-weight: 600;
         }

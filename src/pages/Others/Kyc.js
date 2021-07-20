@@ -7,11 +7,11 @@ import NavbarComponent from '../../components/NavbarComponent';
 import Accordion from '../../components/Accordion'
 
 
-const PrivacyPolicy = ( ) => {
+const KYC = ( ) => {
 
     const accordionData = [
         {
-          title: '1.0 Information collection and use',
+          title: '1.  Age Restriction',
           content: `We collect different types of information from the visitors to our website voluntarily. The collection of the information is to provide and improve our service to you and such information includes but is not limited to:
             Email address,
             First name and last name,
@@ -23,7 +23,7 @@ const PrivacyPolicy = ( ) => {
             .`
         },
         {
-          title: 'Section 2',
+          title: '2 Changes to these terms',
           content: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia veniam
           reprehenderit nam assumenda voluptatem ut. Ipsum eius dicta, officiis
           quaerat iure quos dolorum accusantium ducimus in illum vero commodi
@@ -32,7 +32,7 @@ const PrivacyPolicy = ( ) => {
           Repudiandae, mollitia id reprehenderit a ab odit!`
         },
         {
-          title: 'Section 3',
+          title: '3 Using this service',
           content: `Sapiente expedita hic obcaecati, laboriosam similique omnis architecto ducimus magnam accusantium corrupti
           quam sint dolore pariatur perspiciatis, necessitatibus rem vel dignissimos
           dolor ut sequi minus iste? Quas?`
@@ -43,8 +43,8 @@ const PrivacyPolicy = ( ) => {
     return(
         <Layout>
             <Helmet>
-                <title>Privacy Policy</title>
-                <meta name="title" content="ScaleX - Privacy Policy"/>
+                <title>KYC</title>
+                <meta name="title" content="ScaleX - KYC"/>
                 <meta name="description" content="Scalex ensures you can securely and seamlessly buy and sell cryptocurrencies from anyone, anytime, anywhere."/>
             </Helmet>
             <NavbarComponent/>
@@ -53,7 +53,7 @@ const PrivacyPolicy = ( ) => {
                 <Container>
                     <Row>
                         <Col>
-                            <h2 className="scalex-privacy-policy--title">Privacy Policy</h2>
+                            <h2 className="scalex-privacy-policy--title">KYC</h2>
                         </Col>
                     </Row>
                 </Container>
@@ -63,14 +63,11 @@ const PrivacyPolicy = ( ) => {
                             <div className="scalex-privacy-policy__wrapper">
                                 <h3>Introduction</h3>
                                 <p>
-                                    ScaleX Digital Limited (herein referred to as , “ScaleX”, “us”, “we” or “our”) operates this website (“the Service”).
-                                    We strive to maintain the highest standards of integrity in all our operations. Likewise, we are dedicated to protecting our customers’ and online visitors’ privacy on our service.
+                                    Welcome to ScaleX Digital Limited (herein referred to as “we”, “us”, “our”, “Scalex”) and thank you for choosing this service, website or software application or Application Programming Interface (API) (together referred to as the “Service”).
+                                    By using our service, you are agreeing to these terms and are bound by same. Kindly read through the terms carefully. If you don’t agree with these Terms, don’t use the Service.
                                     
-                                    This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data.
-
-                                    We use your data to provide and improve the Service. Unless otherwise defined in this Privacy Policy, terms used in this Privacy Policy have the same meanings as in our Terms and Condition, accessible from here.
-                                    We recognize that your privacy is important. This document outlines the types of personal information we receive and collect when you use the service, as well as some of the steps we take to safeguard information. 
-                                    We hope this will help you make an informed decision about sharing personal information with us.
+                                    The following Terms of Use as stated below include our Privacy Policy (include link) (together referred to as “The Terms”) apply to any person that enrolls for and/or opens an Account through Scalex.africa or any associated service, software, API, or participates in limited offers.
+                                    
                                 </p>
 
                                 <div className="scalex-accordion">
@@ -93,4 +90,4 @@ const PrivacyPolicy = ( ) => {
     )
 }
 
-export default PrivacyPolicy
+export default KYC

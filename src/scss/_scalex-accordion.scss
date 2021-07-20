@@ -1,0 +1,16 @@
+.scalex-accordion{
+    padding-top: 2rem;
+
+    &--accordion-title{
+        color: $color-blue;
+        font-weight: 600;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    &--accordion-content{
+        padding: 2rem 0rem;
+        font-size: 14px;
+    }
+
+}

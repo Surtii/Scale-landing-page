@@ -16,6 +16,8 @@ import Verification from "./pages/Verification";
 import Converter from './pages/Converter'
 import Order from "./pages/Order";
 import PrivacyPolicy from "./pages/Others/PrivacyPolicy";
+import Terms from "./pages/Others/Terms";
+import KYC from "./pages/Others/Kyc";
 
 
 function App() {
@@ -28,6 +30,8 @@ function App() {
         <Route exact path="/verification/tier-2/:id" component={Verification} />
         <Route exact path="/fees" component={Fees} />
         <Route exact path="/privacy-policy" component={PrivacyPolicy} />
+        <Route exact path="/terms-and-conditions" component={Terms} />
+        <Route exact path="/kyc" component={KYC} />
       </Switch>
     </Router>
   );
