@@ -11,8 +11,18 @@ const Accordion = ({ title, children }) => {
                     className="scalex-accordion--accordion-title d-flex justify-content-between align-items-center" 
                     onClick={() => setIsActive(!isActive)}
                 >
-                    <div>{title}</div>
-                    <div>{isActive ? 'x' : '+'}</div>
+                <div>{title}</div>
+                {
+                    children ? (
+                        <>
+                            
+                            <div>{isActive ? 'x' : '+'}</div>
+                        </>
+                    ) : (
+                        null
+                    )
+                }
+                    
                 </div>
                 {
                     children ? (
