@@ -1,4 +1,4 @@
-import React from 'react'
+import React  from 'react'
 import { Helmet } from "react-helmet";
 import { Col, Container, Row } from 'reactstrap';
 
@@ -7,37 +7,8 @@ import NavbarComponent from '../../components/NavbarComponent';
 import Accordion from '../../components/Accordion'
 
 
-const PrivacyPolicy = ( ) => {
 
-    const accordionData = [
-        {
-          title: '1.0 Information collection and use',
-          content: `We collect different types of information from the visitors to our website voluntarily. The collection of the information is to provide and improve our service to you and such information includes but is not limited to:
-            Email address,
-            First name and last name,
-            Phone number,
-            Address, State, Province, ZIP/Postal code, City
-            Cookies and Usage Data.
-            This information is collected when you request information from us, when you provide it to us, when we obtain same from third parties, when we open and operate an account for you and when you sign up to join our mailing list. The information collected is internally reviewed, used to improve the content of our website, notify our visitors of updates, and respond to visitor inquiries.
-            Once information is reviewed, it is discarded or stored in our files. If we make material changes in the collection of personally identifiable information we will inform you by placing a notice on our site. Personal information received from any visitor will be used only for internal purposes and will not be sold or provided to third parties.
-            .`
-        },
-        {
-          title: 'Section 2',
-          content: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia veniam
-          reprehenderit nam assumenda voluptatem ut. Ipsum eius dicta, officiis
-          quaerat iure quos dolorum accusantium ducimus in illum vero commodi
-          pariatur? Impedit autem esse nostrum quasi, fugiat a aut error cumque
-          quidem maiores doloremque est numquam praesentium eos voluptatem amet!
-          Repudiandae, mollitia id reprehenderit a ab odit!`
-        },
-        {
-          title: 'Section 3',
-          content: `Sapiente expedita hic obcaecati, laboriosam similique omnis architecto ducimus magnam accusantium corrupti
-          quam sint dolore pariatur perspiciatis, necessitatibus rem vel dignissimos
-          dolor ut sequi minus iste? Quas?`
-        }
-    ];
+const PrivacyPolicy = ( ) => {
 
 
     return(
@@ -74,14 +45,34 @@ const PrivacyPolicy = ( ) => {
                                 </p>
 
                                 <div className="scalex-accordion">
-                                    {
-                                        accordionData.map(({ title, content }) => (
-                                           <>
-                                            <hr/>
-                                            <Accordion title={title} content={content} />
-                                           </>
-                                        ))
-                                    }
+                                    <Accordion title="1.0 Information collection and use">
+                                        We collect different types of information from the visitors to our website voluntarily. The collection of the information is to provide and improve our service to you and such information includes but is not limited to:<br/>
+                                        Email address <br/>
+                                        First name and last name <br/>
+                                        Phone number <br/>
+                                        Address, State, Province, ZIP/Postal code, City <br/>
+                                        Cookies and Usage Data.<br/>
+                                        This information is collected when you request information from us, when you provide it to us, when we obtain same from third parties, when we open and operate an account for you and when you sign up to join our mailing list. The information collected is internally reviewed, used to improve the content of our website, notify our visitors of updates, and respond to visitor inquiries.<br/>
+                                        Once information is reviewed, it is discarded or stored in our files. If we make material changes in the collection of personally identifiable information we will inform you by placing a notice on our site. Personal information received from any visitor will be used only for internal purposes and will not be sold or provided to third parties.
+                                    </Accordion>
+                                    <Accordion title="2.0 Types of Data Collected">
+                                    </Accordion>
+                                    <Accordion title="2.1 Personal Data">
+                                        While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you (“Personal Data”).
+                                    </Accordion>
+                                    <Accordion title="2.2 Usage Data">
+                                        We may also collect information on how the Service is accessed and used (“Usage Data”). This Usage Data may include information such as your computer's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that you visit, the time and date of your visit, the time spent on those pages, unique device identifiers and other diagnostic data.
+                                    </Accordion>
+                                    <Accordion title="2.3 Tracking & Cookies Data">
+                                       
+                                        <span className="my-2"> We use cookies and similar tracking technologies to track the activity on our Service and hold certain information. </span><br/>
+                                        <span className="my-2">
+                                            Cookies are files with small amount of data which may include an anonymous unique identifier. Cookies are sent to your browser from a website and stored on your device. Tracking technologies also used are beacons, tags, and scripts to collect and track information and to improve and analyse our Service.
+                                        </span><br/>
+                                        <span className="my-2">
+                                            You can instruct your browser to accept or refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to experience and use some portions of our Service. 
+                                        </span><br/>
+                                    </Accordion>
                                 </div>
                             </div>
                         </Col>
