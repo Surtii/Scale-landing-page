@@ -12,16 +12,19 @@ const NavbarComponent = () => {
                 <Link to="/" className="navbar-brand">
                   <img src={Logo} alt="Logo" className="logo"/>
                 </Link>
-                <Nav className="ml-auto" navbar>
+                <Nav className="ml-auto flex-row align-items-center" navbar> 
+                    <NavItem>
+                        <Link to="/fees" className="nav-link mx-3">Fees</Link>
+                    </NavItem>
                     <NavItem>
                         <Link to="/orders" className="nav-link">
                             <Button color="link" className="start-trading">Start Trading</Button>
                         </Link>
                     </NavItem>
                 </Nav>
-
             </Container>
         </Navbar>
+        
     )
 }
 

@@ -62,8 +62,9 @@ body {
     }
 }
 .nav-link{
-    color: $color-white !important;
-    
+    color: $color-black !important;
+    font-weight: 600;
+    font-size: 1rem !important;
 }
 
 .start-trading{
