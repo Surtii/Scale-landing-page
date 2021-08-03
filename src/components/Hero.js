@@ -27,9 +27,9 @@ const NavbarNew = () => {
                         <Link to="/fees" className="nav-link mx-3">Fees</Link>
                     </NavItem>
                     <NavItem>
-                        <Link to="/orders" className="nav-link">
-                            <Button color="link" className="start-trading">Start Trading</Button>
-                        </Link>
+                        <a href="https://t.me/ScaleXP2PBot" className="nav-link">
+                            <Button color="link" className="start-trading">Sign Up</Button>
+                        </a>
                     </NavItem>
                 </Nav>
             </Container>
