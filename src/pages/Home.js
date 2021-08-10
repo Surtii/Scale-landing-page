@@ -26,6 +26,7 @@ const Home = () => {
                 <title>Scalex - Buy and sell cryptocurrency in the Most Secure P2P exchange</title>
                 <meta name="title" content="Scalex - Buy and sell cryptocurrency in the Most Secure P2P exchange"/>
                 <meta name="description" content="Scalex ensures you can securely and seamlessly buy and sell cryptocurrencies from anyone, anytime, anywhere."/>
+                
             </Helmet>
             <Hero/>
             <section className="scalex-section-two">
