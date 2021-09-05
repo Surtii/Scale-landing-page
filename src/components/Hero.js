@@ -27,8 +27,8 @@ const NavbarNew = () => {
                         <Link to="/fees" className="nav-link mx-3">Fees</Link>
                     </NavItem>
                     <NavItem>
-                        <a href="https://t.me/ScaleXP2PBot" className="nav-link">
-                            <Button color="link" className="start-trading">Sign Up</Button>
+                        <a href="#get-started" className="nav-link">
+                            <Button type="button" color="link" className="start-trading">Sign Up</Button>
                         </a>
                     </NavItem>
                 </Nav>
@@ -43,9 +43,9 @@ const NavbarNew = () => {
                             
                                 <h6 className="scalex-hero__hero-main__left--sub-heading pt-5">Most <span className="text-blue">Secure</span> way to trade Crypto</h6>
                                 <p className="scalex-hero__hero-main__left--paragraph">Scalex ensures you can securely and seamlessly buy and sell cryptocurrencies from anyone, anytime, anywhere in the Globe</p>
-                                <Link to="/orders" >
-                                    <Button color="link" className="start-trading">Start Trading</Button>
-                                </Link>
+                                <a href="#get-started">
+                                    <Button type="button" color="link" className="start-trading">Start Trading</Button>
+                                </a>
                             </div> 
                         </Col>
                         <Col md={6}>

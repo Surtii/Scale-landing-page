@@ -17,8 +17,8 @@ const NavbarComponent = () => {
                         <Link to="/fees" className="nav-link mx-3">Fees</Link>
                     </NavItem>
                     <NavItem>
-                        <a href="https://t.me/ScaleXP2PBot" className="nav-link">
-                            <Button color="link" className="start-trading">Sign Up</Button>
+                        <a href="#get-started" className="nav-link">
+                            <Button  type="button" color="link" className="start-trading">Sign Up</Button>
                         </a>
                     </NavItem>
                 </Nav>

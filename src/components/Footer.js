@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react'
-import {Link} from 'react-router-dom'
 import {Container, Row, Col, Button} from 'reactstrap'
 
 import Facebook from '../images/New/facebook.svg'
@@ -25,9 +24,9 @@ const Footer = (props) => {
 
                         <Col md={6}>
                             <div className="scalex-action__wrapper--left">
-                                <Link to="/orders">
-                                    <Button color="link" className="start-trading-white py-2 btn-lg">Start Trading</Button>
-                                </Link>
+                                <a href="#get-started">
+                                    <Button type="button" color="link" className="start-trading-white py-2 btn-lg">Start Trading</Button>
+                                </a>
                             </div>
                         </Col>
                     </Row>

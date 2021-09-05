@@ -93,8 +93,8 @@ const Home = () => {
                         </Col>
                         <Col md={6}>
                             <div className="scalex-section-three__right-button">
-                                <a href="https://t.me/scalexp2pbot" >
-                                    <Button color="link" className="start-trading">Chat Now</Button>
+                                <a href="#get-started" >
+                                    <Button type="button" color="link" className="start-trading">Chat Now</Button>
                                 </a>
                             </div>
                         </Col>
@@ -144,7 +144,7 @@ const Home = () => {
             </section>
 
 
-            <section className="scalex-section-seven" id="#get-started">
+            <section className="scalex-section-seven" id="get-started">
                 <Container>
                     <Row>
                         <Col md={6} className="order-1">
@@ -156,9 +156,7 @@ const Home = () => {
                             <div className="scalex-section-seven__right">
                                 <h3>Get started to buy and sell via our P2P</h3>
                                 <p>
-                                    Scalex enables our users to trade in globally recognized
-                                    tokens and stablecoins such as Bitcoin, Ethereum, Litecoin, 
-                                    Dogecoin, USDT, BUSD and USDC.
+                                    Subscribe for early access.
                                 </p>
                                 <Form onSubmit={handleSubmit}>
                                     <Row form>
