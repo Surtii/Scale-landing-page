@@ -1,6 +1,6 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Helmet } from "react-helmet";
-import { Container, Row, Col, Card, Button} from 'reactstrap'
+import { Container, Row, Col, Card, Button, Form, FormGroup, Input} from 'reactstrap'
 import OwlCarousel from 'react-owl-carousel'; 
 
 import { options} from '../utils/carousel'
@@ -17,9 +17,28 @@ import Withdraw from '../images/New/withdraw.svg'
 import Charge from '../images/New/charge.svg'
 import World from '../images/New/world.svg'
 import Coins from '../images/New/coins.svg'
+import Phone from '../images/New/phone-shot.svg'
 
+
+const initialState = {
+    email : '',
+}
 
 const Home = () => {
+    const [formData, setFormData] = useState(initialState)
+
+    const { email} = formData
+
+    const handleChange = (e) => {
+        const { name, value } = e.target
+        setFormData({ ...formData, [name]:value })
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(formData)
+    }
+
     return (
         <Layout>
             <Helmet>
@@ -97,6 +116,47 @@ const Home = () => {
                     </Row>
                 </Container>
             </section>
+
+
+            <section className="scalex-section-seven" id="#get-started">
+                <Container>
+                    <Row>
+                        <Col md={6} className="order-1">
+                            <div className="scalex-section-seven__left">
+                            <img src={Phone} alt="Phone screenshot" />
+                            </div>
+                        </Col>
+                        <Col md={6} className="order-2">
+                            <div className="scalex-section-seven__right">
+                                <h3>Get started to buy and sell via our P2P</h3>
+                                <p>
+                                    Scalex enables our users to trade in globally recognized
+                                    tokens and stablecoins such as Bitcoin, Ethereum, Litecoin, 
+                                    Dogecoin, USDT, BUSD and USDC.
+                                </p>
+                                <Form onSubmit={handleSubmit}>
+                                    <Row form>
+                                        <Col md={8}>
+                                            <FormGroup>
+                                                <Input 
+                                                    type="email" 
+                                                    name="email" 
+                                                    value={email} 
+                                                    placeholder="Email"
+                                                    onChange={handleChange}
+                                                />
+                                            </FormGroup>
+                                            <Button type='submit' className="scalex-section-seven__right--button">Get started</Button>
+                                        </Col>
+                                    </Row>
+                                </Form>
+                            </div>
+                        </Col> 
+                    </Row>
+                </Container>
+            </section>
+
+
             <section className="scalex-section-four">
                 <Container>
                     <Row>
