@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
 import { Helmet } from "react-helmet";
-import { Container, Row, Col, Card, Button, Form, FormGroup, Input} from 'reactstrap'
+import { Container, Row, Col, Card, Button, Form, FormGroup, Input, Spinner} from 'reactstrap'
 import OwlCarousel from 'react-owl-carousel'; 
+import axios from 'axios'
 
 import { options} from '../utils/carousel'
 import AllPrices from '../components/AllPrices'
@@ -26,6 +27,8 @@ const initialState = {
 
 const Home = () => {
     const [formData, setFormData] = useState(initialState)
+    const [loading, setLoading] = useState(true)
+    const [message, setMessage] = useState('')
 
     const { email} = formData
 
@@ -34,9 +37,32 @@ const Home = () => {
         setFormData({ ...formData, [name]:value })
     }
 
+    const SubmitForm = async (formData) => {
+
+        const config = {
+            headers: {
+                's-signature': process.env.REACT_APP_API_SECRET,
+                'Content-Type': 'application/json'
+            }
+          }
+          
+        try {
+            const res = await axios.post('https://surtii.com/w/api/v1/subscribers/add', formData, config)
+            const data = res.data.message
+            setLoading(true)
+            setMessage(data)
+            setFormData(initialState)
+        } catch (err) {
+            setMessage(err.response.data.message)
+        }
+        
+    }
+    
+    
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(formData)
+        setLoading(false)
+        SubmitForm(formData)
     }
 
     return (
@@ -144,9 +170,12 @@ const Home = () => {
                                                     value={email} 
                                                     placeholder="Email"
                                                     onChange={handleChange}
+                                                    required
                                                 />
                                             </FormGroup>
-                                            <Button type='submit' className="scalex-section-seven__right--button">Get started</Button>
+                                            <Button type='submit' className="scalex-section-seven__right--button mr-2">Get started</Button>
+                                            {!loading ? <Spinner size="sm" /> : null}
+                                            {message ? <p className="pt-2"> {message}</p>  :  null }
                                         </Col>
                                     </Row>
                                 </Form>
