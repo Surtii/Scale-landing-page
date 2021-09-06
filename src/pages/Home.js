@@ -154,9 +154,9 @@ const Home = () => {
                         </Col>
                         <Col md={6} className="order-2">
                             <div className="scalex-section-seven__right">
-                                <h3>Get started to buy and sell via our P2P</h3>
+                                <h3>Are you ready to <b>Scale</b> your crypto exchanging with scalex</h3>
                                 <p>
-                                    Subscribe for early access.
+                                    Get early access now.
                                 </p>
                                 <Form onSubmit={handleSubmit}>
                                     <Row form>
