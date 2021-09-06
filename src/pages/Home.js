@@ -154,7 +154,7 @@ const Home = () => {
                         </Col>
                         <Col md={6} className="order-2">
                             <div className="scalex-section-seven__right">
-                                <h3>Are you ready to <b>Scale</b> your crypto trade with Scalex</h3>
+                                <h3>Are you ready to <b>Scale</b> your crypto trade with Scalex?</h3>
                                 <p>
                                     Get early access now.
                                 </p>
